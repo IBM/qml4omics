@@ -95,7 +95,19 @@ Submit your job without the interactive session (shown later).  -->
 ```
 conda activate qml4omics
 ``` -->
-4. Run qml4omics pipeline:
+### qml4omics-profiler
+
+The profiler relies on a `config.yaml` file for tis setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.
+
+#### `config.yaml` Structure
+
+The `config.yaml` file should be a structured in YAML format. Please refer to the [`config.yaml`](./configs/config.yaml) file in this repository
+
+**Important:**
+* Ensure that the keys in your `config.yaml`  file match the expected configuration parameters.
+* The project will likely fail or behave unexpectedly if the `config.yaml` file is missing, incorrectly formatted, or contains incorrect values.
+
+#### Running via command prompt 
 ```
 python qml4omics-profiler.py --config-name=config.yaml
 ```
