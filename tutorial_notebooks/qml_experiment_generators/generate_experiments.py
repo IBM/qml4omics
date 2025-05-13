@@ -16,7 +16,7 @@ max_iters = [100,500]
 embeddings = ['pca', 'nmf', 'none']
 
 # paths
-dir_home = re.sub( 'QMLBench.*', 'QMLBench', os.getcwd() )
+dir_home = re.sub( 'qml4omics.*', 'qml4omics', os.getcwd() )
 dir_config = os.path.join( dir_home, 'configs' )
 file_template_config = os.path.join( dir_config, 'config.yaml' )
 dir_config_new = os.path.join( dir_config, 'configs_qml_gridsearch' )
