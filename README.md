@@ -1,5 +1,9 @@
 # Tutorial on Quantum Machine Learning (QML) for Healthcare and Life Science (HCLS) data.
 
+![Minimum Python Version](https://img.shields.io/badge/Python-%3E=%203.9-blue)
+
+This project requires Python 3.9 or higher
+
 ## Getting Started
 
 ### Prerequisites
