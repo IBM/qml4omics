@@ -28,7 +28,7 @@ embeddings: ['pca', 'nmf', 'none']
 n_components: 3
 
 # ML models to generate
-model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn']
+model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn', 'pqk']
 
 average: 'weighted'
 multi_class: 'raise'
@@ -175,6 +175,13 @@ vqc_args: {'primitive': 'sampler',
            'ansatz_type' : 'amp'
            }
 
+# Begin PRK arguments
+pqk_args: {'encoding': ZZ,
+           'entanglement': 'pairwise',
+           'primitive': 'estimator',
+           'reps': 4
+           }
+           
 # set hydra output directories
 hydra:
   run:
