@@ -10,9 +10,9 @@ Before you can run this project, you need to have python installed on your syste
 
 This is the standard way to create an isolated Python enviroment.
 
-** Steps:**
+**Steps:**
 
-1. Install pip (if you don't have it): **
+1. **Install pip (if you don't have it):**
   ```bash
    python -m ensurepip --default-pip
   ```
