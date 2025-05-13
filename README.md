@@ -1,8 +1,8 @@
 # Tutorial on Quantum Machine Learning (QML) for Healthcare and Life Science (HCLS) data.
 
-![Minimum Python Version](https://img.shields.io/badge/Python-%3E=%203.9-blue)
-
-This project requires Python 3.9 or higher
+ [![Minimum Python Version](https://img.shields.io/badge/Python-%3E=%203.9-blue)](https://www.python.org/downloads/) [![Maximum Python Version Tested](https://img.shields.io/badge/Python-%3C=%203.11-blueviolet)](https://www.python.org/downloads/) [![Supported Python Versions](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-blue)](https://www.python.org/downloads/) 
+ 
+ This project has been tested and is compatible with Python versions 3.9, 3.10, and 3.11. While it might work on other versions, these are the officially supported and tested ones. 
 
 ## Getting Started
 
