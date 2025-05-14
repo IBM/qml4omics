@@ -154,5 +154,9 @@ def compute_pqk(X_train, X_test, y_train, y_test, args, model='PQK', data_key = 
                         # Add other hyperparameters as needed
                         }
     model_params = hyperparameters
+
+    print(f"Currently running a projected quantum kernel (PQK) method on this dataset.")
+    print(f"The number of qubits in your circuit is: {feature_map.num_qubits}")
+    print(f"The number of parameters in your circuit is: {feature_map.num_parameters}")
     
     return(modeleval(y_test, y_predicted, beg_time, model_params, args, model=model, verbose=verbose))

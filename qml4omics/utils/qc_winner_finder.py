@@ -44,7 +44,7 @@ def qml_winner(results_df, rawevals_df, output_dir, tag):
     best_per_dataset = df_best.loc[df_best.groupby('Dataset')['f1_score'].idxmax()]
     # best_per_dataset = df_across_split.loc[df_across_split.groupby('Dataset')['f1_score'].idxmax()]
     # create list of qml methods
-    qml_list = ['qsvc', 'qnn', 'vqc']
+    qml_list = ['qsvc', 'qnn', 'vqc', 'pqk']
     qml_winner = df_best[df_best['Dataset'].isin(best_per_dataset[best_per_dataset['model'].isin(qml_list)]['Dataset'])]
     #qml_winner = df_across_split[df_across_split['Dataset'].isin(best_per_dataset[best_per_dataset['model'].isin(qml_list)]['Dataset'])]
     if not qml_winner.empty:

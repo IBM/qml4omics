@@ -18,7 +18,7 @@ backend: 'simulator'
 qiskit_json_path: '~/.qiskit/qiskit-ibm.json'
 
 # of ML methods to parallelize
-n_jobs: 9
+n_jobs: 10
 
 # select the embedding method for reducing dimensionality (number of features) in your data set
 # embeddings: ['none']
@@ -55,7 +55,7 @@ NN_depth: 1
 
 # This sets the number of times you will perform a train-test split of your data.
 # For each split, models are generated for every model-embedding combination specified above.
-iter: 3
+iter: 2
 
 # Begin function arguments
 # Each CML method will have a grid search set of arguments as well as a standard
