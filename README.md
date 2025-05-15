@@ -10,9 +10,9 @@
 
 Before you can run this project, you need to have python installed on your system
 
-#### Option 1: Setting up a Python Virtual Enviroment (venv)
+#### Option 1: Setting up a Python Virtual Environment (venv)
 
-This is the standard way to create an isolated Python enviroment.
+This is the standard way to create an isolated Python Environment.
 
 **Steps:**
 
@@ -25,17 +25,17 @@ This is the standard way to create an isolated Python enviroment.
   sudo apt update
   sudo apt install python3-pip
   ```
-2. **Create a virtual enviroment:**
+2. **Create a virtual environment:**
 ```bash
    python -m venv venv
   ```
-This command creatas a new directory named `venv` (you can choose a different name if you prefer) containing a copy of the Python interpreter and necessary supporting files.
-3. **Activate the virtual enviroment:**
+This command creates a new directory named `venv` (you can choose a different name if you prefer) containing a copy of the Python interpreter and necessary supporting files.
+3. **Activate the virtual environment:**
 * **On macOS and Linux:**
 ```bash
   source venv/bin/activate
   ```
-* **On Windows (command promt):**
+* **On Windows (command prompt):**
 ```bash
   venv\Scripts\activate
   ```
@@ -43,27 +43,27 @@ This command creatas a new directory named `venv` (you can choose a different na
 ```bash
   .\venv\Scripts\Activate.ps1
   ```
-Once the activated, you'll see `(venv)` at the beginning of your terminal promt.
+Once activated, you'll see `(venv)` at the beginning of your terminal prompt.
 
 4. **Install project dependencies:**
-   Once the virtual enviroment is activated, you can install the required packages listed in the `requirements.txt` file:
+   Once the virtual environment is activated, you can install the required packages listed in the `requirements.txt` file:
   ```bash
   pip install  -r requirements.txt
   ```
-5. **Deactivate the virtual enviroment (when you are done):**
+5. **Deactivate the virtual environment (when you are done):**
    ```bash
     deactivate
    ```
-   This will return you to your base Python enviroment.
+   This will return you to your base Python environment.
 
-#### Option 2: Setting up a Conda Enviroment
+#### Option 2: Setting up a Conda Environment
 
-1. Create the environment from the `requirements.txt` file.  This can be done using anaconda, miniconda, miniforge, or any other environment manager.
+1. Create the environment from the `requirements.txt` file.  This can be done using Anaconda, miniconda, miniforge, or any other environment manager.
 ```
 conda create -n qml4omics python==3.11
 
 ```
-* Note: if you receive the error `bash: conda: command not found...`, you need to install some form of anaconda to your development environment.
+* Note: if you receive the error `bash: conda: command not found...`, you need to install some form of anaconda in your development environment.
 2. Activate the new environment:
 ```
 conda activate qml4omics
@@ -97,11 +97,11 @@ conda activate qml4omics
 ``` -->
 ### qml4omics-profiler
 
-The profiler relies on a `config.yaml` file for tis setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.
+The profiler relies on a `config.yaml` file for this setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.
 
 #### `config.yaml` Structure
 
-The `config.yaml` file should be a structured in YAML format. Please refer to the [`config.yaml`](./configs/config.yaml) file in this repository
+The `config.yaml` file should be structured in YAML format. Please refer to the [`config.yaml`](./configs/config.yaml) file in this repository
 
 **Important:**
 * Ensure that the keys in your `config.yaml`  file match the expected configuration parameters.
