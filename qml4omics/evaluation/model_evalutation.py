@@ -1,13 +1,10 @@
 # ====== Base class imports ======
 
 import time
-from typing import Literal
 import pandas as pd
 
 # ====== Scikit-learn imports ======
 
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
 
 from qml4omics.utils.helper_fn import print_results

@@ -1,6 +1,4 @@
-import torch
 import torch.nn as nn
-import torch.optim as optim
 
 # Define the Autoencoder Model
 class ConvAutoencoder(nn.Module):

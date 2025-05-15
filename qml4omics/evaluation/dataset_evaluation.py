@@ -5,14 +5,10 @@ import hfda
 
 # ====== Scipy imports ======
 from scipy.stats import entropy
-from scipy.linalg import norm, inv, eigvals
 from scipy.spatial import ConvexHull as CH
 
 # ====== Scikit-learn imports ======
-from sklearn import datasets
 from skdim import id
-from skdim.id import lPCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.feature_selection import mutual_info_classif, VarianceThreshold
 from sklearn.neighbors import KernelDensity
 from sklearn.manifold import Isomap

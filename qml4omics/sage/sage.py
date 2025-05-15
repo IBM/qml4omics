@@ -53,7 +53,6 @@ class QuantumSage():
         self.set_seed()
 
 
-    # TODO: trained sage should predict over every metric so that the user can decide what they want predicted
     def predict(self, input_data, metric = 'f1_score'):
         '''
         Function to make the prediction for a given metric on each of the models
