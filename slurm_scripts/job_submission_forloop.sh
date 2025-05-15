@@ -16,7 +16,7 @@ echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
 start=`date +%s`
 
 ##### Loop over input yamls -- this may be happening serially
-for i in {1..2160}
+for i in {1..864} # this range should be the same as the number of input yaml files in config folder
 do
    python qml4omics-profiler.py --config-path=path/to/experiment/config/folder/ --config-name=exp_${i}.yaml
 done

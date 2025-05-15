@@ -140,7 +140,7 @@ hydra:
     - path: ''
       schema: structured
       provider: schema
-    output_dir: /Users/raubenb/Desktop/gitrepos/qml4omics/results/basic_config/dataset=ALL/simulator_2025-05-13_21-55-42
+    output_dir: /Users/raubenb/Desktop/gitrepos/qml4omics/results/basic_config/dataset=ALL/simulator_2025-05-14_15-17-32
     choices:
       hydra/env: default
       hydra/callbacks: null

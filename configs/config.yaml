@@ -17,10 +17,12 @@ backend: 'simulator'
 # IBM runtime credentials - they should be in your home directory by default, but if they are elsewhere, please change path below.
 qiskit_json_path: '~/.qiskit/qiskit-ibm.json'
 
-# of ML methods to parallelize
+# of ML methods to run in parallel
+# this is the number of jobs to run in parallel, and should be set to no more than the number of models you will run, or the number of cores you have available.
 n_jobs: 10
 
 # select the embedding method for reducing dimensionality (number of features) in your data set
+# this always needs to be a list! even if you only want to use one embedding method, it still needs to be in a list.
 # embeddings: ['none']
 embeddings: ['pca', 'nmf', 'none']
 
@@ -28,6 +30,7 @@ embeddings: ['pca', 'nmf', 'none']
 n_components: 3
 
 # ML models to generate
+# parameters to use for each ML method are listed further down in this file
 model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn', 'pqk']
 
 average: 'weighted'
