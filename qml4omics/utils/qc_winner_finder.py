@@ -66,15 +66,15 @@ def qml_winner(results_df, rawevals_df, output_dir, tag):
         winner_evals_df.to_csv(( os.path.join( output_dir,  tag +'_winner_evals.csv')), index=False)
         winner_scores_df = qc_method_and_score.iloc[:, -3:]
         winner_scores_df.to_csv(( os.path.join( output_dir,  tag +'_winner_score.csv')), index=False)
-        winner_eval_score = pd.concat([winner_evals_df, winner_scores_df], axis=1)
-        winner_eval_score.to_csv(( os.path.join( output_dir,  tag +'_winner_eval_score.csv')), index=False) # contains dataset, evaluation, qml method, and  average f1 score 
+        #winner_eval_score = pd.concat([winner_evals_df, winner_scores_df], axis=1)
+        #winner_eval_score.to_csv(( os.path.join( output_dir,  tag +'_winner_eval_score.csv')), index=False) # contains dataset, evaluation, qml method, and  average f1 score 
         #######
         
         # optional print statements
         print('*** The number of qml winners is', len(dataset))
         print('*** The qml winners are:', dataset)
         
-        return qml_winner, winner_eval_score
+        return qml_winner#, winner_eval_score
     
     else:
         print('*** QML methods were outperformed by CML methods in all datasets ***')
