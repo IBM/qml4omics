@@ -19,3 +19,10 @@ seaborn==0.13.2
 tensorflow==2.16.2
 tqdm==4.66.4
 umap-learn==0.5.7
+
+# Documentation
+sphinx
+sphinx-autodoc-typehints 
+sphinx_rtd_theme
+myst_parser
+better_apidoc

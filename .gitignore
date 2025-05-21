@@ -1,0 +1,6 @@
+venv/*
+docs/build/*
+
+__pychace__/*
+
+.DS_Store
