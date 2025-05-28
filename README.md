@@ -79,7 +79,7 @@ pip list
    * [Set up / install Anaconda on remote linux server](https://kengchichang.com/post/conda-linux/)
    * [Set up remote development environment using VSCode](https://code.visualstudio.com/docs/remote/ssh) -->
 
-<a name="running_comical"></a>
+<a name="running_qml4omics"></a>
 <!-- ### Running qml4omics -->
 
 <!-- [![Notebook Template][notebook]](#running_comical) -->
@@ -128,3 +128,4 @@ Contributors and contact info:
 * Filippo Utro (futro@us.ibm.com)
 * Akhil Mohan (mohana2@ccf.org)
 * Daniel Blankenberg (blanked2@ccf.org)
+* Laxmi Parida (parida@us.ibm.com)
