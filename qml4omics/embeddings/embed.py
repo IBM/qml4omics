@@ -6,7 +6,7 @@ from sklearn.manifold import (
     LocallyLinearEmbedding,
     SpectralEmbedding,
 )
-#from umap import UMAP
+from umap import UMAP
 
 def get_embeddings(embedding, X_train, X_test, n_neighbors=30, n_components=None, method=None):
     assert n_components <= X_train.shape[1], "number of components greater than number of feature in the dataset"
