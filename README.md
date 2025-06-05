@@ -1,6 +1,6 @@
 # Quantum-enabled multi-omics analysis
 
-[![main_page][main_page]](#)
+![schedule](images/main_page.png)
 
 
 
