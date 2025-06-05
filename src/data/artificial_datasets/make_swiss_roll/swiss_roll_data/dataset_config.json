@@ -1,0 +1,902 @@
+{
+    "swiss_roll_data-1.csv": {
+        "n_samples": 100,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-2.csv": {
+        "n_samples": 100,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-3.csv": {
+        "n_samples": 100,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-4.csv": {
+        "n_samples": 100,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-5.csv": {
+        "n_samples": 100,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-6.csv": {
+        "n_samples": 100,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-7.csv": {
+        "n_samples": 100,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-8.csv": {
+        "n_samples": 100,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-9.csv": {
+        "n_samples": 100,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-10.csv": {
+        "n_samples": 100,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-11.csv": {
+        "n_samples": 100,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-12.csv": {
+        "n_samples": 100,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-13.csv": {
+        "n_samples": 100,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-14.csv": {
+        "n_samples": 100,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-15.csv": {
+        "n_samples": 100,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-16.csv": {
+        "n_samples": 100,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-17.csv": {
+        "n_samples": 100,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-18.csv": {
+        "n_samples": 100,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-19.csv": {
+        "n_samples": 120,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-20.csv": {
+        "n_samples": 120,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-21.csv": {
+        "n_samples": 120,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-22.csv": {
+        "n_samples": 120,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-23.csv": {
+        "n_samples": 120,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-24.csv": {
+        "n_samples": 120,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-25.csv": {
+        "n_samples": 120,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-26.csv": {
+        "n_samples": 120,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-27.csv": {
+        "n_samples": 120,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-28.csv": {
+        "n_samples": 120,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-29.csv": {
+        "n_samples": 120,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-30.csv": {
+        "n_samples": 120,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-31.csv": {
+        "n_samples": 120,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-32.csv": {
+        "n_samples": 120,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-33.csv": {
+        "n_samples": 120,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-34.csv": {
+        "n_samples": 120,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-35.csv": {
+        "n_samples": 120,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-36.csv": {
+        "n_samples": 120,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-37.csv": {
+        "n_samples": 140,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-38.csv": {
+        "n_samples": 140,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-39.csv": {
+        "n_samples": 140,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-40.csv": {
+        "n_samples": 140,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-41.csv": {
+        "n_samples": 140,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-42.csv": {
+        "n_samples": 140,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-43.csv": {
+        "n_samples": 140,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-44.csv": {
+        "n_samples": 140,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-45.csv": {
+        "n_samples": 140,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-46.csv": {
+        "n_samples": 140,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-47.csv": {
+        "n_samples": 140,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-48.csv": {
+        "n_samples": 140,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-49.csv": {
+        "n_samples": 140,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-50.csv": {
+        "n_samples": 140,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-51.csv": {
+        "n_samples": 140,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-52.csv": {
+        "n_samples": 140,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-53.csv": {
+        "n_samples": 140,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-54.csv": {
+        "n_samples": 140,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-55.csv": {
+        "n_samples": 160,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-56.csv": {
+        "n_samples": 160,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-57.csv": {
+        "n_samples": 160,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-58.csv": {
+        "n_samples": 160,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-59.csv": {
+        "n_samples": 160,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-60.csv": {
+        "n_samples": 160,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-61.csv": {
+        "n_samples": 160,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-62.csv": {
+        "n_samples": 160,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-63.csv": {
+        "n_samples": 160,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-64.csv": {
+        "n_samples": 160,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-65.csv": {
+        "n_samples": 160,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-66.csv": {
+        "n_samples": 160,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-67.csv": {
+        "n_samples": 160,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-68.csv": {
+        "n_samples": 160,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-69.csv": {
+        "n_samples": 160,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-70.csv": {
+        "n_samples": 160,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-71.csv": {
+        "n_samples": 160,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-72.csv": {
+        "n_samples": 160,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-73.csv": {
+        "n_samples": 180,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-74.csv": {
+        "n_samples": 180,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-75.csv": {
+        "n_samples": 180,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-76.csv": {
+        "n_samples": 180,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-77.csv": {
+        "n_samples": 180,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-78.csv": {
+        "n_samples": 180,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-79.csv": {
+        "n_samples": 180,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-80.csv": {
+        "n_samples": 180,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-81.csv": {
+        "n_samples": 180,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-82.csv": {
+        "n_samples": 180,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-83.csv": {
+        "n_samples": 180,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-84.csv": {
+        "n_samples": 180,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-85.csv": {
+        "n_samples": 180,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-86.csv": {
+        "n_samples": 180,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-87.csv": {
+        "n_samples": 180,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-88.csv": {
+        "n_samples": 180,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-89.csv": {
+        "n_samples": 180,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-90.csv": {
+        "n_samples": 180,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-91.csv": {
+        "n_samples": 200,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-92.csv": {
+        "n_samples": 200,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-93.csv": {
+        "n_samples": 200,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-94.csv": {
+        "n_samples": 200,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-95.csv": {
+        "n_samples": 200,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-96.csv": {
+        "n_samples": 200,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-97.csv": {
+        "n_samples": 200,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-98.csv": {
+        "n_samples": 200,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-99.csv": {
+        "n_samples": 200,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-100.csv": {
+        "n_samples": 200,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-101.csv": {
+        "n_samples": 200,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-102.csv": {
+        "n_samples": 200,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-103.csv": {
+        "n_samples": 200,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-104.csv": {
+        "n_samples": 200,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-105.csv": {
+        "n_samples": 200,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-106.csv": {
+        "n_samples": 200,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-107.csv": {
+        "n_samples": 200,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-108.csv": {
+        "n_samples": 200,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-109.csv": {
+        "n_samples": 220,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-110.csv": {
+        "n_samples": 220,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-111.csv": {
+        "n_samples": 220,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-112.csv": {
+        "n_samples": 220,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-113.csv": {
+        "n_samples": 220,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-114.csv": {
+        "n_samples": 220,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-115.csv": {
+        "n_samples": 220,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-116.csv": {
+        "n_samples": 220,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-117.csv": {
+        "n_samples": 220,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-118.csv": {
+        "n_samples": 220,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-119.csv": {
+        "n_samples": 220,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-120.csv": {
+        "n_samples": 220,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-121.csv": {
+        "n_samples": 220,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-122.csv": {
+        "n_samples": 220,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-123.csv": {
+        "n_samples": 220,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-124.csv": {
+        "n_samples": 220,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-125.csv": {
+        "n_samples": 220,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-126.csv": {
+        "n_samples": 220,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-127.csv": {
+        "n_samples": 240,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-128.csv": {
+        "n_samples": 240,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-129.csv": {
+        "n_samples": 240,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-130.csv": {
+        "n_samples": 240,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-131.csv": {
+        "n_samples": 240,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-132.csv": {
+        "n_samples": 240,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-133.csv": {
+        "n_samples": 240,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-134.csv": {
+        "n_samples": 240,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-135.csv": {
+        "n_samples": 240,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-136.csv": {
+        "n_samples": 240,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-137.csv": {
+        "n_samples": 240,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-138.csv": {
+        "n_samples": 240,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-139.csv": {
+        "n_samples": 240,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-140.csv": {
+        "n_samples": 240,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-141.csv": {
+        "n_samples": 240,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-142.csv": {
+        "n_samples": 240,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-143.csv": {
+        "n_samples": 240,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-144.csv": {
+        "n_samples": 240,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-145.csv": {
+        "n_samples": 260,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-146.csv": {
+        "n_samples": 260,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-147.csv": {
+        "n_samples": 260,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-148.csv": {
+        "n_samples": 260,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-149.csv": {
+        "n_samples": 260,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-150.csv": {
+        "n_samples": 260,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-151.csv": {
+        "n_samples": 260,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-152.csv": {
+        "n_samples": 260,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-153.csv": {
+        "n_samples": 260,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-154.csv": {
+        "n_samples": 260,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-155.csv": {
+        "n_samples": 260,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-156.csv": {
+        "n_samples": 260,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-157.csv": {
+        "n_samples": 260,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-158.csv": {
+        "n_samples": 260,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-159.csv": {
+        "n_samples": 260,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-160.csv": {
+        "n_samples": 260,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-161.csv": {
+        "n_samples": 260,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-162.csv": {
+        "n_samples": 260,
+        "noise": 0.9,
+        "hole": false
+    },
+    "swiss_roll_data-163.csv": {
+        "n_samples": 280,
+        "noise": 0.1,
+        "hole": true
+    },
+    "swiss_roll_data-164.csv": {
+        "n_samples": 280,
+        "noise": 0.1,
+        "hole": false
+    },
+    "swiss_roll_data-165.csv": {
+        "n_samples": 280,
+        "noise": 0.2,
+        "hole": true
+    },
+    "swiss_roll_data-166.csv": {
+        "n_samples": 280,
+        "noise": 0.2,
+        "hole": false
+    },
+    "swiss_roll_data-167.csv": {
+        "n_samples": 280,
+        "noise": 0.3,
+        "hole": true
+    },
+    "swiss_roll_data-168.csv": {
+        "n_samples": 280,
+        "noise": 0.3,
+        "hole": false
+    },
+    "swiss_roll_data-169.csv": {
+        "n_samples": 280,
+        "noise": 0.4,
+        "hole": true
+    },
+    "swiss_roll_data-170.csv": {
+        "n_samples": 280,
+        "noise": 0.4,
+        "hole": false
+    },
+    "swiss_roll_data-171.csv": {
+        "n_samples": 280,
+        "noise": 0.5,
+        "hole": true
+    },
+    "swiss_roll_data-172.csv": {
+        "n_samples": 280,
+        "noise": 0.5,
+        "hole": false
+    },
+    "swiss_roll_data-173.csv": {
+        "n_samples": 280,
+        "noise": 0.6,
+        "hole": true
+    },
+    "swiss_roll_data-174.csv": {
+        "n_samples": 280,
+        "noise": 0.6,
+        "hole": false
+    },
+    "swiss_roll_data-175.csv": {
+        "n_samples": 280,
+        "noise": 0.7,
+        "hole": true
+    },
+    "swiss_roll_data-176.csv": {
+        "n_samples": 280,
+        "noise": 0.7,
+        "hole": false
+    },
+    "swiss_roll_data-177.csv": {
+        "n_samples": 280,
+        "noise": 0.8,
+        "hole": true
+    },
+    "swiss_roll_data-178.csv": {
+        "n_samples": 280,
+        "noise": 0.8,
+        "hole": false
+    },
+    "swiss_roll_data-179.csv": {
+        "n_samples": 280,
+        "noise": 0.9,
+        "hole": true
+    },
+    "swiss_roll_data-180.csv": {
+        "n_samples": 280,
+        "noise": 0.9,
+        "hole": false
+    }
+}

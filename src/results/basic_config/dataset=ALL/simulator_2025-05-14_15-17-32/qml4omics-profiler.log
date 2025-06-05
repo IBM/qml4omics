@@ -1,0 +1,66 @@
+[2025-05-14 15:17:32,233][__main__][INFO] - Main program initiated
+[2025-05-14 15:17:32,233][__main__][INFO] - The number of ML methods being parallelized is 10
+[2025-05-14 15:17:32,233][__main__][INFO] - Chosen backend for quantum algorithms is: simulator
+[2025-05-14 15:17:32,311][__main__][INFO] - Started processing data set iris_binary_class_dataset.csv
+[2025-05-14 15:17:32,313][__main__][INFO] - Begin processing iteration (split) 1 of 2
+[2025-05-14 15:17:32,314][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:18:16,214][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:18:53,267][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:19:36,105][__main__][INFO] - The run time for iteration (split) 1 is: 123.79294991493225
+[2025-05-14 15:19:36,106][__main__][INFO] - Begin processing iteration (split) 2 of 2
+[2025-05-14 15:19:36,106][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:20:13,599][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:20:50,845][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:21:33,551][__main__][INFO] - The run time for iteration (split) 2 is: 117.4467339515686
+[2025-05-14 15:21:33,552][__main__][INFO] - The total run time for data set iris_binary_class_dataset.csv is: 
+241.318208694458
+[2025-05-14 15:21:33,552][__main__][INFO] - Program has processed 1 out of 4 data sets
+[2025-05-14 15:21:33,552][__main__][INFO] - Program has 3 data sets left to process
+[2025-05-14 15:21:33,584][__main__][INFO] - Started processing data set ld_data-1.csv
+[2025-05-14 15:21:33,585][__main__][INFO] - Begin processing iteration (split) 1 of 2
+[2025-05-14 15:21:33,585][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:22:10,899][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:22:48,657][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:25:22,983][__main__][INFO] - The run time for iteration (split) 1 is: 229.3991482257843
+[2025-05-14 15:25:22,985][__main__][INFO] - Begin processing iteration (split) 2 of 2
+[2025-05-14 15:25:22,986][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:26:00,933][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:26:36,377][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:29:11,352][__main__][INFO] - The run time for iteration (split) 2 is: 228.3681080341339
+[2025-05-14 15:29:11,352][__main__][INFO] - The total run time for data set ld_data-1.csv is: 
+457.79978013038635
+[2025-05-14 15:29:11,352][__main__][INFO] - Program has processed 2 out of 4 data sets
+[2025-05-14 15:29:11,352][__main__][INFO] - Program has 2 data sets left to process
+[2025-05-14 15:29:11,399][__main__][INFO] - Started processing data set spheres_data-1.csv
+[2025-05-14 15:29:11,401][__main__][INFO] - Begin processing iteration (split) 1 of 2
+[2025-05-14 15:29:11,401][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:30:54,546][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:32:38,732][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:35:00,852][__main__][INFO] - The run time for iteration (split) 1 is: 349.45298886299133
+[2025-05-14 15:35:00,854][__main__][INFO] - Begin processing iteration (split) 2 of 2
+[2025-05-14 15:35:00,855][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:36:45,704][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:38:28,690][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:40:49,704][__main__][INFO] - The run time for iteration (split) 2 is: 348.85117173194885
+[2025-05-14 15:40:49,704][__main__][INFO] - The total run time for data set spheres_data-1.csv is: 
+698.3516321182251
+[2025-05-14 15:40:49,704][__main__][INFO] - Program has processed 3 out of 4 data sets
+[2025-05-14 15:40:49,704][__main__][INFO] - Program has 1 data sets left to process
+[2025-05-14 15:40:49,740][__main__][INFO] - Started processing data set spirals_data-2.csv
+[2025-05-14 15:40:49,746][__main__][INFO] - Begin processing iteration (split) 1 of 2
+[2025-05-14 15:40:49,748][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:41:28,320][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:42:06,082][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:43:02,502][__main__][INFO] - The run time for iteration (split) 1 is: 132.76135802268982
+[2025-05-14 15:43:02,504][__main__][INFO] - Begin processing iteration (split) 2 of 2
+[2025-05-14 15:43:02,504][__main__][INFO] - Feature reduction (embedding) applied with pca
+[2025-05-14 15:43:39,507][__main__][INFO] - Feature reduction (embedding) applied with nmf
+[2025-05-14 15:44:17,773][__main__][INFO] - No feature reduction (embedding) applied in this iteration
+[2025-05-14 15:45:15,360][__main__][INFO] - The run time for iteration (split) 2 is: 132.85704112052917
+[2025-05-14 15:45:15,360][__main__][INFO] - The total run time for data set spirals_data-2.csv is: 
+265.65504479408264
+[2025-05-14 15:45:15,360][__main__][INFO] - Program has processed 4 out of 4 data sets
+[2025-05-14 15:45:15,360][__main__][INFO] - Program has 0 data sets left to process
+[2025-05-14 15:45:15,366][__main__][INFO] - 
+The total run time of program is: 
+1663.1329190731049
