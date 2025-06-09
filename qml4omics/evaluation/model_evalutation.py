@@ -13,6 +13,24 @@ from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
 from qml4omics.utils.helper_fn import print_results
 
 def modeleval(y_test, y_predicted, beg_time, params, args, model:str, verbose = True, average='weighted'):
+    """
+    Evaluates the model performance using accuracy, F1 score, and AUC.
+
+    Args:
+        y_test (array-like): True labels for the test set.
+        y_predicted (array-like): Predicted labels by the model.
+        beg_time (float): Start time for measuring execution time.
+        params (dict): Model parameters used during training.
+        args (dict): Additional arguments, including grid search flag.
+        model (str): Name of the model being evaluated.
+        verbose (bool): If True, prints the evaluation results.
+        average (str): Type of averaging to use for F1 score calculation.
+            Default is 'weighted'.
+
+    Returns:
+        pd.DataFrame: DataFrame containing the evaluation results, including accuracy, F1 score, AUC, and model parameters.
+    """
+    # Calculate evaluation metrics
     auc = roc_auc_score(y_test, y_predicted)
     accuracy = accuracy_score(y_test, y_predicted, normalize=True)
     f1 = f1_score(y_test, y_predicted, average=average)

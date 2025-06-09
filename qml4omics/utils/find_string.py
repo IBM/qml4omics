@@ -2,7 +2,18 @@ import os
 
 #os.path.join('configs', 'configs_CCC_grid')
 def find_string_in_file(file_path, search_string):
-    '''Find a string in a file and return the number of files containing that string.'''
+    '''This function searches for a specific string in all files within a given directory.
+    It prints the names of files that contain the string and counts how many files contain it.
+    This can be useful for quickly identifying configurations or settings in multiple files,
+    such as when checking for specific parameters in configuration files or logs.
+    
+    Args:
+        file_path (str): The path to the directory containing the files to search.
+        search_string (str): The string to search for in the files.
+
+    Returns:
+        None
+    '''
     nc_filecount = 0
     file_count = []
     for file in os.scandir(os.path.join(file_path)):

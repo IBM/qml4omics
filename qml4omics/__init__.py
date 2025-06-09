@@ -11,7 +11,7 @@ from qml4omics.quantum.supervised.compute_qnn import compute_qnn
 from qml4omics.quantum.supervised.compute_qsvc import compute_qsvc
 from qml4omics.quantum.supervised.compute_vqc import compute_vqc
 from qml4omics.quantum.supervised.compute_pqk import compute_pqk
-from qml4omics.quantum.unsupervised.compute_qkm import compute_qkm
+
 
 # ====== Import our embedding functions ======
 from qml4omics.embeddings.embed import get_embeddings

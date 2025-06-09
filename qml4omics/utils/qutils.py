@@ -26,6 +26,19 @@ from qml4omics.utils.ibm_account import instantiate_runtime_service
 
 
 def get_backend_session( args: dict, primitive : str, num_qubits : int ):
+    """
+    This function to get the backend and session for the specified primitive.
+
+    Args:
+        args (dict): Dictionary containing backend and other parameters.
+        primitive (str): The type of primitive to instantiate ('sampler' or 'estimator').
+        num_qubits (int): Number of qubits for the backend.
+
+    Returns:
+        backend: The backend instance.
+        session: The session instance.
+        prim: The instantiated primitive (Sampler or Estimator).
+    """
     backend = None
     session = None
     prim = None
@@ -58,6 +71,20 @@ def get_backend_session( args: dict, primitive : str, num_qubits : int ):
 
 def transpile_circuit( circuit, opt_level, backend, initial_layout, PT = False, 
                       dd_sequence = 'XpXm'):
+    """
+    This function transpiles the given quantum circuit based on the optimization level and backend.
+
+    Args:
+        circuit (QuantumCircuit): The quantum circuit to be transpiled.
+        opt_level (int or str): Optimization level for transpilation.
+        backend (Backend): The backend to which the circuit will be transpiled.
+        initial_layout (Layout): Initial layout for the transpilation.
+        PT (bool): Whether to apply pulse twirling. Defaults to False.
+        dd_sequence (str): Sequence for dynamical decoupling. Defaults to 'XpXm'.
+
+    Returns:
+        t_qc (QuantumCircuit): The transpiled quantum circuit.
+    """
     if str(opt_level) == 'AI':
         pm = TranspilerService(
             backend_name=backend,
@@ -89,6 +116,20 @@ def get_sampler(
     dd_seq = 'XpXm',
     PT = True,
     ):
+
+    """
+    This function creates a Sampler instance with specified options.
+
+    Args:
+        mode (Session): The session mode for the sampler.
+        shots (int): Number of shots for sampling.
+        dd (bool): Whether to enable dynamical decoupling.
+        dd_seq (str): Sequence type for dynamical decoupling.
+        PT (bool): Whether to enable pulse twirling.
+
+    Returns:
+        Sampler: An instance of the Sampler with the specified options.
+    """
     
     sampler_options = SamplerOptions()
 
@@ -121,6 +162,19 @@ def get_estimator(
     dd_seq = 'XpXm',
     PT = True,
     ):
+    """
+    This function creates an Estimator instance with specified options.
+
+    Args:
+        mode (Session): The session mode for the estimator.
+        shots (int): Number of shots for estimation.
+        resil_level (int): Resilience level for error suppression.
+        dd (bool): Whether to enable dynamical decoupling.
+        dd_seq (str): Sequence type for dynamical decoupling.
+        PT (bool): Whether to enable pulse twirling.
+    Returns:
+        Estimator: An instance of the Estimator with the specified options.
+    """
     
     experimental_opts = {}
     # experimental_opts["execution_path"] = "gen3-turbo"
@@ -148,6 +202,19 @@ def get_estimator(
     return estimator
 
 def get_ansatz( ansatz_type, feat_dimension, reps = 1, entanglement = 'linear'):
+    """
+    This function returns an ansatz based on the specified type and parameters.
+    It supports 'esu2', 'amp', and 'twolocal' ansatz types, constructing it using the specified feature dimension, 
+    number of repetitions, and entanglement type.
+
+    Args:
+        ansatz_type (str): Type of the ansatz ('esu2', 'amp', or 'twolocal').
+        feat_dimension (int): Number of qubits for the ansatz.
+        reps (int): Number of repetitions for the ansatz.
+        entanglement (str): Type of entanglement for the ansatz.
+    Returns:
+        ansatz: An instance of the specified ansatz type.
+    """
     if(ansatz_type=='esu2'):
         ansatz = EfficientSU2(feat_dimension, ['ry', 'rz'], entanglement, reps=reps)
     elif ansatz_type == 'amp':
@@ -158,6 +225,20 @@ def get_ansatz( ansatz_type, feat_dimension, reps = 1, entanglement = 'linear'):
 
 
 def get_feature_map( feature_map, feat_dimension, reps = 1, entanglement = 'linear', data_map_func = None ):
+    """
+    This function returns a feature map based on the specified type and parameters.
+    It supports 'Z', 'ZZ', and 'P' feature maps, constructing it using the specified feature dimension,
+    number of repetitions, entanglement type, and data mapping function.
+    Args:
+        feature_map (str): Type of the feature map ('Z', 'ZZ', or 'P').
+        feat_dimension (int): Number of qubits for the feature map.
+        reps (int): Number of repetitions for the feature map.
+        entanglement (str): Type of entanglement for the feature map.
+        data_map_func (callable, optional): Function to map data to the feature map parameters.
+    Returns:
+        feature_map: An instance of the specified feature map type.
+        feat_dimension (int): The number of qubits in the feature map.
+    """
     # Get Feature Map
     if feature_map == 'Z':
         feature_map = ZFeatureMap(feat_dimension,reps=reps, parameter_prefix='a', data_map_func = data_map_func)
@@ -182,6 +263,21 @@ def get_feature_map( feature_map, feat_dimension, reps = 1, entanglement = 'line
 
 def get_optimizer( type = 'COBYLA', max_iter = 100, learning_rate_a = None, 
                   perturbation_gamma = None, prior_iter = 0 ):
+    """
+    This function returns an optimizer based on the specified type and parameters.
+    It supports 'SPSA', 'COBYLA', 'GradientDescent', and 'L_BFGS_B' optimizer types,
+    constructing it using the specified maximum iterations, learning rate, perturbation gamma, and prior iterations.
+
+    Args:
+        type (str): Type of the optimizer ('SPSA', 'COBYLA', 'GradientDescent', or 'L_BFGS_B').
+        max_iter (int): Maximum number of iterations for the optimizer.
+        learning_rate_a (float, optional): Initial learning rate for SPSA.
+        perturbation_gamma (float, optional): Perturbation gamma for SPSA.
+        prior_iter (int): Number of prior iterations to consider.
+
+    Returns:
+        optimizer: An instance of the specified optimizer type.
+    """
     if type == 'SPSA':
         if (learning_rate_a != None) & (perturbation_gamma != None):
             # set up the power series

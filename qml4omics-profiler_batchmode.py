@@ -22,6 +22,15 @@ input_data_path = 'data/tutorial_test_data/lower_dim_datasets'
 
 
 def run_job(data_file):
+    """This function runs the qml4omics-profiler.py script with a given data file and updates the YAML configuration file accordingly.
+    It modifies the configuration file to include the data file name, timestamp, and data type, and then executes the profiling script with the updated configuration.
+    This function is designed to be used in a batch processing context, where multiple datasets are processed in parallel. 
+
+    Args:
+        data_file (str): The name of the data file to be processed.
+    Returns:
+        None
+    """
 
     ## edit YAML    
 
@@ -41,10 +50,18 @@ def run_job(data_file):
     with open('configs/'+config_name, "w") as yaml_file:
         yaml.dump(data, yaml_file, default_flow_style=False)
     
-    commands = ["python", "qsage_run.py", "--config-name="+config_name]
+    commands = ["python", "qml4omics-profiler.py", "--config-name="+config_name]
     subprocess.run(commands) 
 
 def main():
+    """Main function to run the qml4omics-profiler.py in batch mode. It sets up the environment, processes datasets in parallel, and collects results.
+    This function is designed to handle multiple datasets efficiently, allowing for parallel processing of machine learning methods and datasets.
+    
+    Args:
+        None
+    Returns:
+        None
+    """  
 
     n_jobs = 1
     current_dir = os.getcwd()

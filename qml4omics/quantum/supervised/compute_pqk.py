@@ -18,6 +18,38 @@ from sklearn import svm
 
 def compute_pqk(X_train, X_test, y_train, y_test, args, model='PQK', data_key = '', verbose=False,
                  encoding = 'Z', primitive = 'estimator', entanglement = 'linear', reps= 2):
+    """
+    This function generates quantum circuits, computes projections of the data onto these circuits,
+    and evaluates the performance of a Support Vector Classifier (SVC) on the projected data.
+    It uses a feature map to encode the data into quantum states and then measures the expectation values
+    of Pauli operators to obtain the features. The SVC is trained on the projected training data and
+    evaluated on the projected test data. The function returns evaluation metrics and model parameters.
+    This function requires a quantum backend (simulator or real quantum hardware) for execution.
+    It supports various configurations such as encoding methods, entanglement strategies, and repetitions
+    of the feature map. The results are saved to files for training and test projections, which are reused
+    if they already exist to avoid redundant computations.
+    This function is part of the main quantum machine learning pipeline (qml4omics-profiler.py) and is intended for use in supervised learning tasks.
+    It leverages quantum computing to enhance feature extraction and classification performance on complex datasets.
+    The function returns the performance results, including accuracy, F1-score, AUC, runtime, as well as model parameters, and other relevant metrics.
+    
+    Args:
+        X_train (np.ndarray): Training data features.
+        X_test (np.ndarray): Test data features.
+        y_train (np.ndarray): Training data labels.
+        y_test (np.ndarray): Test data labels.
+        args (dict): Arguments containing backend and other configurations.
+        model (str): Model type, default is 'PQK'.
+        data_key (str): Key for the dataset, default is ''.
+        verbose (bool): If True, print additional information, default is False.
+        encoding (str): Encoding method for the quantum circuit, default is 'Z'.
+        primitive (str): Primitive type to use, default is 'estimator'.
+        entanglement (str): Entanglement strategy, default is 'linear'.
+        reps (int): Number of repetitions for the feature map, default is 2.
+
+    Returns:
+        modeleval (dict): A dictionary containing evaluation metrics and model parameters.
+    """
+
     beg_time = time.time()
     feat_dimension = X_train.shape[1]
 

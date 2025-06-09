@@ -3,7 +3,33 @@ import filecmp
 import itertools
 
 def find_duplicate_files(directory):
-    '''Find duplicate files in a directory based on their content.  This can be used to find duplicate config.yaml files, for example.'''
+    ''' 
+    This function scans the specified directory for files and compares their content.
+    It identifies files that have identical content, even if they have different names.
+    It returns a list of tuples, where each tuple contains the paths of two duplicate files.
+    If no duplicates are found, it returns an empty list.
+    This function reads the content of each file line by line, ignoring empty lines,
+    and compares the sorted content of each pair of files to determine if they are duplicates.
+
+    This could have many practical uses, including finding duplicate config.yaml files, which
+    can be useful when running a slurm script that is iterating over the yaml files in the config folder.
+    For example, When generating the qml gridsearch configs (via the generate_experiments notebook), 
+    it is possible to generate duplicate configs, which would cause redundant runs.  This function can help identify those duplicates, 
+    allowing the user to remove them before running the slurm script.
+
+    Args:
+        directory (str): The path to the directory to search for duplicate files.
+
+    Returns:
+        duplicates (list): A list of tuples, where each tuple contains the paths of two duplicate files.
+    If no duplicates are found, an empty list is returned.
+    Example:
+        >>> find_duplicate_files("configs/configs_qml_gridsearch/")
+        [('configs/configs_qml_gridsearch/config1.yaml', 'configs/configs_qml_gridsearch/config2.yaml')]
+    Example:
+        >>> find_duplicate_files("configs/configs_qml_gridsearch/")
+        []
+    '''
 
     files = []
     for file in os.scandir(os.path.join(directory)):

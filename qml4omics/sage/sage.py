@@ -23,6 +23,9 @@ class QuantumSage():
     '''
 
     def __init__(self, data_input):
+        '''
+        This function initializes the Sage with the input data frame that contains the data characteristics and performance metrics
+        '''
 
         self._columns_data_features = [ '# Features', '# Samples',
                                         'Feature_Samples_ratio', 'Intrinsic_Dimension', 'Condition number',
@@ -56,7 +59,20 @@ class QuantumSage():
     # TODO: trained sage should predict over every metric so that the user can decide what they want predicted
     def predict(self, input_data, metric = 'f1_score'):
         '''
-        Function to make the prediction for a given metric on each of the models
+        This function is used to make the prediction for a given metric on each of the models.
+        The input data should be a DataFrame with the same features as the training data.
+        The metric should be one of the available metrics (f1_score, auc, accuracy).
+        It returns a DataFrame with the predictions for each model and the R2 score of the prediction.
+        The predictions are sorted by the product of the metric and the R2 score, so that the best performing model is at the top.
+        If the metric is not one of the available metrics, it will return None.
+        If the input data does not have the same features as the training data, it will raise an error.
+
+        Args:
+            input_data (pd.DataFrame): DataFrame with the same features as the training data.
+            metric (str): The metric to predict. Should be one of the available metrics (f1_score, auc, accuracy).
+
+        Returns:
+            predictions_df (pd.DataFrame): DataFrame with the predictions for each model and the R2 score of the prediction.
         '''
 
         predictions = []
@@ -73,7 +89,35 @@ class QuantumSage():
     def train_sub_sages(self, test_size=0.2, sage_type = 'random_forest'):
 
         '''
-        Train the actual sage per ML method that was tested
+        This function trains the actual sage for each ML method that was tested previously.
+        It will train a sub-sage for each metric and each model.  The sub-sage will be trained on the features of the input data
+        and the corresponding metric for each model.  The sub-sage will be trained on a train-test split of the data, using either a random forest 
+        or a MLP regressor depending on the sage_type parameter.  The results of the training will be stored in the _results_subsages dictionary, which will have the following structure:
+        _results_subsages = {
+            'metric1': {
+                'model1': {
+                    'fit_model': <trained model>,
+                    'preds': <predictions on test set>,
+                    'y_test': <true values on test set>,
+                    'params': <model parameters>,
+                    'mae': <mean absolute error>,
+                    'mse': <mean squared error>,
+                    'rmse': <root mean squared error>,
+                    'r2': <R2 score>
+                },
+                ...
+            },
+            ...
+        }
+
+        This function will iterate over each metric and each model, and train the corresponding sub-sage, while printing the progress.
+
+        Args:
+            test_size (float): The proportion of the data to be used for the test set. Default is 0.2.
+            sage_type (str): The type of sage to be used. Can be 'random_forest' or 'mlp'. Default is 'random_forest'.
+
+        Returns:
+            None: The function does not return anything, it just trains the sub-sages and stores the results in the _results_subsages dictionary.  
         '''
         for metric in self._available_metrics:
             print(f"Working on {metric}")
@@ -100,8 +144,24 @@ class QuantumSage():
     def _sage_mlp(self, X_train, X_test, y_train, y_test, n_iter = 50):
 
         '''
-        Perform a randomize search of the parameter space in order to find the best settings for the MLP
+        This function performs a randomized search of the parameter space in order to find the best settings for the MLP
         and then make a final prediction on the test set.  The randomize search is doing a 5 fold cross validation.
+        The MLPRegressor is trained with the best parameters found in the randomized search.
+        The function returns a dictionary containing the trained model, predictions, true values, parameters, and evaluation metrics.
+        The evaluation metrics include mean absolute error (mae), mean squared error (mse), root mean squared error (rmse), and R2 score (r2).
+        This function is used to train a sub-sage for the MLP model.
+        It is called by the train_sub_sages function and is not meant to be called directly by the user, and is designed to be used with the 
+        input data that has been preprocessed and split into training and test sets.
+        
+        Args:
+            X_train (pd.DataFrame): Training features.
+            X_test (pd.DataFrame): Test features.
+            y_train (pd.Series): Training labels.
+            y_test (pd.Series): Test labels.
+            n_iter (int): Number of iterations for the randomized search. Default is 50.
+
+        Returns:
+            result (dict): A dictionary containing the trained model, predictions, true values, parameters, and evaluation metrics.
         '''
 
         param_distributions = {"hidden_layer_sizes": [1,50], 
@@ -152,8 +212,23 @@ class QuantumSage():
     def _sage_random_forest(self, X_train, X_test, y_train, y_test, n_iter = 50):
 
         '''
-        Perform a randomize search of the parameter space in order to find the best settings for the Random Forest
-        and then make a final prediction on the test set.  The randomize search is doing a 5 fold cross validation.
+        This function performs a randomized search of the parameter space in order to find the best settings for the Random Forest
+        and then make a final prediction on the test set.  The randomized search is doing a 5 fold cross validation.
+        The RandomForestRegressor is trained with the best parameters found in the randomized search.
+        The function returns a dictionary containing the trained model, predictions, true values, parameters, and evaluation metrics.
+        The evaluation metrics include mean absolute error (mae), mean squared error (mse), root mean squared error (rmse), and R2 score (r2).
+        This function is used to train a sub-sage for the Random Forest model.  
+        It is called by the train_sub_sages function and is not meant to be called directly by the user, and is designed to be used with the
+        input data that has been preprocessed and split into training and test sets.
+
+        Args:
+            X_train (pd.DataFrame): Training features.
+            X_test (pd.DataFrame): Test features.
+            y_train (pd.Series): Training labels.
+            y_test (pd.Series): Test labels.
+            n_iter (int): Number of iterations for the randomized search. Default is 50.
+        Returns:
+            result (dict): A dictionary containing the trained model, predictions, true values, parameters, and evaluation metrics.
         '''
 
         param_distributions = {
@@ -201,8 +276,17 @@ class QuantumSage():
 
     def plot_results(self, saveFile='' ):
 
-        '''
-        Results plotting function
+        ''' This function plots the results of the sub-sages trained on the input data.
+        It will create a bar plot for each metric showing the performance of each model, and a scatter plot of the predictions vs. true values.
+        The bar plot will show the mean absolute error (mae), mean squared error (mse), root mean squared error (rmse), and R2 score (r2) for each model.
+        The scatter plot will show the predictions vs. true values for each model.
+        If saveFile is provided, the plots will be saved to that file. Otherwise, the plots will be shown.
+        It is designed to be used after the train_sub_sages function has been called, and the sub-sages have been trained.
+        Args:
+            saveFile (str): The file name to save the plots. If empty, the plots will be shown. Default is ''.
+        Returns:
+            None: The function does not return anything, it just plots the results of the sub-sages.
+        
         '''
 
         results = []

@@ -32,6 +32,19 @@ current_dir = os.getcwd()
 # Begin the main function and instatiate Hydra class
 @hydra.main(config_path='./configs/', config_name='config.yaml', version_base='1.1')
 def main(args):
+    """
+    Main function to run the QML4Omics profiler. It initializes logging, sets up the environment, and processes datasets.
+    The function reads datasets from the specified folder, applies feature encoding, splits the data into training and test sets,
+    applies scaling and embeddings, and evaluates the models using various quantum machine learning methods.
+    It logs the results and saves them in a structured format for further analysis. 
+    The function also handles parallel processing of multiple machine learning methods and datasets.
+
+    Args:
+        args (dict): Configuration parameters for the profiler, including dataset paths, model parameters, and evaluation settings.
+
+    Returns:
+        None
+    """
     beg_time = time.time() 
     log = logging.getLogger(__name__)
     log.info(f"Main program initiated")

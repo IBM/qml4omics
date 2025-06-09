@@ -9,12 +9,15 @@ def get_creds(args):
     specified in the config.yaml file, and then parses its contents. It returns the main items in this json file,
     such as the instance and api token, which can then be passed into the QML functions when using a real
     hardware backend.
-    
-    Args: 
-        args: arguments passed in from the config.yaml file.
-        
+    The function will return a dictionary with the keys 'channel', 'instance', 'token', and 'url',
+    which can be used to instantiate the QiskitRuntimeService.
+    If the qiskit_json_path is provided, it will attempt to read the credentials from that file.
+    Args:
+        args (dict): This passes the arguments from the config.yaml file.  In this particular case, it is importing the path to the qiskit-ibm.json file (qiskit_json_path) and the credentials
+        defined in this json file (ibm_channel, ibm_instance, ibm_token, ibm_url).
+
     Returns:
-        dictionary that can be used to instantiate a QiskitRuntimeService
+        rval (dict): A dictionary containing the IBM Quantum credentials, including 'channel', 'instance', 'token', and 'url'.
     """
     cred_source_dict = {'channel':'ibm_channel', 'instance':'ibm_instance', 'token':'ibm_token', 'url':'ibm_url'}
     rval = {}
@@ -44,5 +47,15 @@ def get_creds(args):
     return rval
 
 def instantiate_runtime_service(args):
-    """Quick way to instantiate QiskitRuntimeService in one place. A basic call to this function can then be done in anywhere else."""
+    """This function provides a quick way to instantiate QiskitRuntimeService in one place. A basic call to this function can then be done in anywhere else.
+    It uses the get_creds function to retrieve the necessary credentials from the qiskit-ibm.json file, with the file path specified in the config.yaml file.
+    It returns an instance of the QiskitRuntimeService class, which can be used to interact with IBM Quantum services.
+
+    Args:
+        args (dict): This passes the arguments from the config.yaml file.  In this particular case, it is importing the path to the qiskit-ibm.json file (qiskit_json_path) and the credentials
+        defined in this json file (ibm_channel, ibm_instance, ibm_token, ibm_url).
+        
+    Returns:
+        QiskitRuntimeService: An instance of the QiskitRuntimeService class, initialized with the credentials from the qiskit-ibm.json file or the provided arguments.
+    """
     return QiskitRuntimeService(**get_creds(args))

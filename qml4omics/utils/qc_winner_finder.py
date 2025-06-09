@@ -6,9 +6,13 @@ import pandas as pd
 import os
 
 def qml_winner(results_df, rawevals_df, output_dir, tag):
-    """Find data sets where QML was beneficial (higher F1 scores than CML) and create new .csv files
-    with the relevant evaluation and performance for these specific datasets, for further analysis.
-
+    """This function finds data sets where QML was beneficial (higher F1 scores than CML) and create new .csv files
+    with the relevant evaluation and performance for these specific datasets, for further analysis.  
+    It also computes the best results per method across all splits and the best results per dataset.
+    It returns two DataFrames: one with the datasets where QML methods outperformed CML methods, and another with the
+    evaluation scores for the best QML method for each of these datasets.
+    It also saves these DataFrames as .csv files in the specified output directory.
+    
     Args:
         results_df (pandas.DataFrame): Dataset in pandas corresponding to 'ModelResults.csv'
         rawevals_df (pandas.DataFrame): Dataset in pandas corresponding to 'RawDataEvaluation.csv'

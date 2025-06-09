@@ -15,6 +15,24 @@ def compute_results_correlation( results_df, correlation = 'spearman', thresh = 
     """This function takes in as input a Pandas Dataframe containing the results and data evaluations for
     a given dataset.  It then produces a spearman correlation between the data evaluation characteristics (features)
     and instances where an F1 score was observed above a certain threshold (thresh).
+    The function returns the input DataFrame with additional columns for datatype and model_embed_datatype,
+    as well as a new DataFrame containing the computed correlations between metrics and features.
+    The correlation is computed for each model-embedding-dataset combination, and the results are aggregated.
+    The features considered for correlation include various data characteristics such as 'Feature_Samples_ratio', 'Intrinsic_Dimension', etc.
+    The metrics considered for correlation include 'accuracy', 'f1_score', 'time', and 'auc'.
+    The function also calculates the median metric value and the fraction of instances above the specified threshold for each combination.
+    The resulting DataFrame contains the model-embedding-dataset, metric, feature, median metric value, fraction above threshold, and the computed correlation.
+    This function is useful for understanding how different data characteristics relate to model performance metrics, particularly in the context of machine learning models applied to datasets.
+
+    Args:
+        results_df (pd.DataFrame): A DataFrame containing the results and data evaluations.
+        correlation (str): The type of correlation to compute, default is 'spearman'.
+        thresh (float): The threshold for F1 score to consider, default is 0.7.
+    
+    Returns:
+        results_df (pd.DataFrame): The input DataFrame with additional columns for datatype and model_embed_datatype.
+        correlations_df (pd.DataFrame): A DataFrame containing the computed correlations between metrics and features.
+
     """
 
     # Refining datasrame
@@ -53,6 +71,18 @@ def plot_results_correlation( correlations_df, metric = 'f1_score', title = '', 
     correlation, while blue indicates an anti-correlation.  The strength of either type of correlation is represented by 
     the shade of coloring -- the darker the circle, the more correlated/anticorrelated that particular characteristic is
     to the model's performance. 
+
+    Args:
+        correlations_df (pd.DataFrame): A DataFrame containing the computed correlations between metrics and features.
+        metric (str): The metric to plot, default is 'f1_score'.
+        title (str): The title of the plot, default is an empty string.
+        correlation_type (str): The type of correlation to display in the legend, default is an empty string.
+        figsize (tuple): The size of the figure, default is (6, 6).
+        save_file_path (str): The file path to save the plot, default is an empty string.
+        size (str): The column name to use for the size of the dots, default is 'correlation'.
+        
+    Returns:
+        None: Displays the plot and saves it to the specified file path if provided. 
     """
     
     # Use CenteredNorm to center the colormap at 0

@@ -6,9 +6,23 @@ from sklearn.manifold import (
     LocallyLinearEmbedding,
     SpectralEmbedding,
 )
-from umap import UMAP
+#from umap import UMAP
 
 def get_embeddings(embedding, X_train, X_test, n_neighbors=30, n_components=None, method=None):
+
+    """This function applies the specified embedding technique to the training and test datasets.
+    Args:
+        embedding (str): The embedding technique to use. Options are 'none', 'pca', 'nmf', 'lle', 'isomap', 'spectral', or 'umap'.
+        X_train (array-like): The training dataset.
+        X_test (array-like): The test dataset.
+        n_neighbors (int, optional): Number of neighbors for certain embeddings. Defaults to 30.
+        n_components (int, optional): Number of components for the embedding. If None, it defaults to the number of features in X_train.
+        method (str, optional): Method for Locally Linear Embedding. Defaults to None.
+        
+    Returns:
+        tuple: Transformed training and test datasets.
+    """
+
     assert n_components <= X_train.shape[1], "number of components greater than number of feature in the dataset"
     if 'none' == embedding:
         return X_train, X_test

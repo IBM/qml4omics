@@ -25,6 +25,33 @@ from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 def compute_qsvc(X_train, X_test, y_train, y_test, args, model='QSVC', data_key = '',
                  C=1, gamma='scale', pegasos=False, encoding: Literal['ZZ', 'Z', 'P']="ZZ",
                  entanglement='linear', primitive = 'sampler', reps = 2, verbose=False):
+    """
+    This function computes a quantum support vector classifier (QSVC) using the Qiskit Machine Learning library.
+    It takes training and testing datasets, along with various parameters to configure the QSVC model.
+    It initializes the quantum feature map, sets up the backend and session, and fits the QSVC model to the training data.
+    It then predicts the labels for the test data and evaluates the model's performance.
+    The function returns the performance results, including accuracy, F1-score, AUC, runtime, as well as model parameters, and other relevant metrics.
+    
+    Args:
+        X_train (np.ndarray): Training feature set.
+        X_test (np.ndarray): Testing feature set.
+        y_train (np.ndarray): Training labels.
+        y_test (np.ndarray): Testing labels.
+        args (dict): Dictionary containing arguments for the quantum backend and other settings.
+        model (str): Model type, default is 'QSVC'.
+        data_key (str): Key for the dataset, default is an empty string.
+        C (float): Regularization parameter for the SVM, default is 1.
+        gamma (str or float): Kernel coefficient, default is 'scale'.
+        pegasos (bool): Whether to use Pegasos QSVC, default is False.
+        encoding (str): Feature map encoding type, options are 'ZZ', 'Z', or 'P', default is 'ZZ'.
+        entanglement (str): Entanglement strategy for the feature map, default is 'linear'.
+        primitive (str): Primitive type to use, default is 'sampler'.
+        reps (int): Number of repetitions for the feature map, default is 2.
+        verbose (bool): Whether to print additional information, default is False.
+
+    Returns:
+        modeleval (dict): A dictionary containing the evaluation results, including accuracy, runtime, model parameters, and other relevant metrics.
+    """
     beg_time = time.time()
     
     

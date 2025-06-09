@@ -21,7 +21,40 @@ def compute_lr(X_train, X_test, y_train, y_test, args, model='Logistic Regressio
     
     """This function generates a model using a Logistic Regression (lr) method as implemented in scikit-learn 
     (https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html). It takes in parameter
-    arguments specified in the config.yaml file, but will use the default parameters specified above if none are passed.
+    arguments specified in the config.yaml file, but will use the default parameters specified above if none are passed. 
+    The model is trained on the training dataset and validated on the test dataset. The function returns the evaluation of the model 
+    on the test dataset, including accuracy, AUC, F1 score, and the time taken to train and validate the model.
+    This function is designed to be used in a supervised learning context, where the goal is to classify data points.
+
+    Args:
+        X_train (numpy.ndarray): Training data features.
+        X_test (numpy.ndarray): Test data features.
+        y_train (numpy.ndarray): Training data labels.
+        y_test (numpy.ndarray): Test data labels.
+        args (dict): Additional arguments, such as dataset name and other configurations.
+        model (str): Name of the model being used, default is 'Logistic Regression'.
+        data_key (str): Key for the dataset, default is an empty string.
+        penalty (str): Regularization penalty, default is 'l2'.
+        dual (bool): Dual formulation, default is False.
+        tol (float): Tolerance for stopping criteria, default is 0.0001.
+        C (float): Inverse of regularization strength, default is 1.0.
+        fit_intercept (bool): Whether to fit the intercept, default is True.
+        intercept_scaling (float): Scaling factor for the intercept, default is 1.
+        class_weight (dict or None): Weights associated with classes, default is None.
+        random_state (int or None): Random seed for reproducibility, default is None.
+        solver (str): Algorithm to use in the optimization problem, default is 'saga'.
+        max_iter (int): Maximum number of iterations for convergence, default is 10000.
+        multi_class (str): Multi-class option, deprecated in this context.
+        verbose (bool): Whether to print detailed logs, default is False.
+        warm_start (bool): Whether to reuse the solution of the previous call to fit as initialization,
+                           default is False.
+        n_jobs (int or None): Number of jobs to run in parallel for both `fit` and `predict`, 
+                              default is None which means 1 unless in a joblib.parallel_backend context.
+        l1_ratio (float or None): The Elastic-Net mixing parameter, with 0 <= l1_ratio <= 1. 
+                                  Only used if penalty='elasticnet', default is None.
+    
+    Returns:
+        modeleval (dict): A dictionary containing the evaluation metrics, model parameters, and time taken for training and validation.
     """    
     
     beg_time = time.time()
@@ -44,7 +77,26 @@ def compute_lr_opt(X_train, X_test, y_train, y_test, args, model='Logistic Regre
     (https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html). The difference here is that
     this function runs a grid search. The range of the grid search for each parameter is specified in the config.yaml file. The
     combination of parameters that led to the best performance is saved and returned as best_params, which can then be used on similar
-    datasets, without having to run the grid search.
+    datasets, without having to run the grid search. The function returns the evaluation of the model 
+    on the test dataset, including accuracy, AUC, F1 score, and the time taken to train and validate the model across the grid search.
+    This function is designed to be used in a supervised learning context, where the goal is to classify data points.
+
+    Args:
+        X_train (numpy.ndarray): Training data features.
+        X_test (numpy.ndarray): Test data features.
+        y_train (numpy.ndarray): Training data labels.
+        y_test (numpy.ndarray): Test data labels.
+        args (dict): Additional arguments, such as dataset name and other configurations.
+        model (str): Name of the model being used, default is 'Logistic Regression'.
+        cv (int): Number of cross-validation folds, default is 5.
+        penalty (list): List of penalties to try, default is an empty list.
+        C (list): List of inverse regularization strengths to try, default is an empty list.
+        solver (list): List of solvers to try, default is an empty list.
+        verbose (bool): Whether to print detailed logs, default is False.
+        max_iter (list): List of maximum iterations to try, default is an empty list.
+    
+    Returns:
+        modeleval (dict): A dictionary containing the evaluation metrics, best parameters, and time taken for training and validation.
     """  
     
     beg_time = time.time()

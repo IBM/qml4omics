@@ -19,6 +19,32 @@ def compute_qnn(X_train, X_test, y_train, y_test, args, model='QNN', data_key = 
                 primitive: Literal['estimator', 'sampler'] = 'sampler', verbose=False, 
                  local_optimizer: Literal['COBYLA', 'L_BFGS_B', 'GradientDescent']='COBYLA', 
                 maxiter=100, encoding = 'Z', entanglement = 'linear', reps= 2, ansatz_type = 'amp'):
+    """
+    This function computes a Quantum Neural Network (QNN) model on the provided training data and evaluates it on the test data.
+    It constructs a QNN circuit with a specified feature map and ansatz, optimizes it using a chosen optimizer, and fits the model to the training data.
+    It then predicts the labels for the test data and evaluates the model's performance.
+    The function returns the performance results, including accuracy, F1-score, AUC, runtime, as well as model parameters, and other relevant metrics.
+
+    Args:
+        X_train (array-like): Training feature set.
+        X_test (array-like): Test feature set.
+        y_train (array-like): Training labels.
+        y_test (array-like): Test labels.
+        args (dict): Dictionary containing configuration parameters for the QNN.
+        model (str, optional): Model type. Defaults to 'QNN'.
+        data_key (str, optional): Key for the dataset. Defaults to ''.
+        primitive (Literal['estimator', 'sampler'], optional): Type of primitive to use. Defaults to 'sampler'.
+        verbose (bool, optional): If True, prints additional information. Defaults to False.
+        local_optimizer (Literal['COBYLA', 'L_BFGS_B', 'GradientDescent'], optional): Optimizer to use. Defaults to 'COBYLA'.
+        maxiter (int, optional): Maximum number of iterations for the optimizer. Defaults to 100.
+        encoding (str, optional): Feature encoding method. Defaults to 'Z'.
+        entanglement (str, optional): Entanglement strategy for the circuit. Defaults to 'linear'.
+        reps (int, optional): Number of repetitions for the feature map and ansatz. Defaults to 2.
+        ansatz_type (str, optional): Type of ansatz to use. Defaults to 'amp'.
+    
+    Returns:
+        modeleval (dict): A dictionary containing the evaluation results, including accuracy, runtime, model parameters, and other relevant metrics.
+    """ 
     beg_time = time.time()
     
     

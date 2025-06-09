@@ -20,7 +20,16 @@ from sklearn.manifold import Isomap
 import warnings
 
 # df = pd.DataFrame(X)
-def get_dimensions(df): 
+def get_dimensions(df):
+    """Get the number of features, samples, and feature-to-sample ratio from a DataFrame.
+    Args:
+        df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+    Returns:
+        tuple: (num_features, num_samples, ratio)
+            - num_features (int): Number of features in the DataFrame
+            - num_samples (int): Number of samples in the DataFrame
+            - ratio (float): Feature-to-sample ratio
+    """ 
     # number of features
     num_features = df.shape[1]
     # of samples
@@ -30,7 +39,13 @@ def get_dimensions(df):
     
     return num_features, num_samples, ratio 
 
-def get_intrinsic_dim(df): 
+def get_intrinsic_dim(df):
+    """Get intrinsic dimension of the data using lPCA from skdim.
+    Args:
+        df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+    Returns:
+        float: Intrinsic dimension of the data
+    """ 
     # Intrinsic dimension, calculated via scikit-dimension's PCA method
     pca = id.lPCA() # Initialize the PCA estimator from skdim
     pca.fit(df) # Fit the estimator to your data
@@ -57,7 +72,7 @@ def get_fdr(df,y):
 
     Args:
         df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
-        y (numpy.array): supervised class label
+        y (int): supervised binary class label
         
     Returns:
         float: Fisher Discriminant ratio
@@ -107,6 +122,7 @@ def get_mutual_information(df, y):
 
     Args:
         df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+        y (int): supervised binary class label
 
     Returns:
         float: Mutual information
@@ -163,6 +179,10 @@ def get_low_var_features(df, num_features):
 
     Args:
         df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+        num_features (int): number of features in the dataset
+    
+    Raises:
+        ValueError: If no feature is strong enough to keep
 
     Returns:
         int: count of features with low variance
@@ -193,6 +213,15 @@ def get_log_density(df):
     return log_density.mean()
 
 def get_fractal_dim(df, k_max):
+    """Calculate the fractal dimension of the data using Higuchi's method
+    
+    Args:
+        df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+        k_max (int): Maximum number of k values to use in the calculation
+        
+    Returns:
+        float: Fractal dimension of the data
+    """
     FD = hfda.measure(df, k_max)
     
     return FD 
@@ -225,7 +254,7 @@ def get_entropy(y):
     """Calculate entropy of the target variable
 
     Args:
-        y (int): binary target variable 
+        y (int): supervised binary class label 
         
     Returns: 
         avg_y_entropy (float): mean entropy 
@@ -258,6 +287,10 @@ def get_volume(df):
 def get_complexity(df): 
     """ 
     Measure the manifold complexity by fitting Isomap and analyzing the geodesic vs. Euclidean distances.
+    This function computes the reconstruction error of the Isomap algorithm, which serves as an indicator of the complexity of the manifold represented by the data.
+
+    Args:
+    df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
     
     Parameters:
     - data: Input data, shape (n_samples, n_features)
@@ -265,6 +298,8 @@ def get_complexity(df):
     - n_components: Number of components (dimensions) for Isomap projection
     
     Returns:
+    - reconstruction_error: float
+        The reconstruction error of the Isomap model, which indicates the complexity of the manifold.
     - reconstruction_error: The residual error of geodesic distances
     """
     isomap = Isomap(n_neighbors=10, n_components=2)
@@ -277,9 +312,21 @@ def get_complexity(df):
     
 
 def evaluate(df, y, file):
-    """Takes a pandas DataFrame as an input and returns a transposed DataFrame with the calculated mean, median,
-    standard deviation, variation, skewness, coefficient of variation as percentage, mean/median difference,
-    and kurtosis for each numeric column."""
+    """This function evaluates a dataset and returns a transposed summary DataFrame with various statistical measures, derived from the dataset.
+    Using the functions defined above, it computes intrinsic dimension, condition number, Fisher Discriminant Ratio, total correlation, mutual information, variance, coefficient of variation, 
+    data sparsity, low variance features, data density, fractal dimension, data distributions (skewness and kurtosis), entropy of the target variable, and manifold complexity.
+    The summary DataFrame is transposed for easier readability and contains the dataset name, number of features, number of samples, feature-to-sample ratio, and various statistical measures.
+    This function is useful for quickly summarizing the characteristics of a dataset, especially in the context of machine learning and data analysis, allowing you to correlate the dataset's 
+    properties with its performance in predictive modeling tasks.
+    
+    Args:
+        df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+        y (int): supervised binary class label
+        file (str): Name of the dataset file for identification in the summary DataFrame
+        
+    Returns:
+        transposed (pandas.DataFrame): Summary DataFrame containing various statistical measures of the dataset
+    """
     # Select only numeric columns from the DataFrame
     df_numeric = df.select_dtypes(include=[np.number])
 

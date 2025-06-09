@@ -7,6 +7,19 @@ import pandas as pd
 
  # Do this to find out which datasets were complete
 def track_progress(input_dataset_dir, current_results_dir):
+    """
+    This function checks the current results directory for completed datasets and compares them to the input dataset directory.
+    It prints out the number of completed datasets and how many input datasets are left to process.
+    It assumes that a dataset is considered complete if a specific file ('RawDataEvaluation.csv') exists in the dataset's results directory, since producing
+    this file is the last step in the pipeline.
+    
+    Args:
+        input_dataset_dir (str): Path to the directory containing input datasets.
+        current_results_dir (str): Path to the directory containing outputs of the current job.
+
+    Returns:
+        None
+    """
     completed_files = []
     file_name = 'RawDataEvaluation.csv' # if this file was produced, then this dataset was fully processed
     for entry in os.scandir(current_results_dir):
@@ -28,7 +41,19 @@ current_results_dir = 'path to dir containing outputs of current job'
 track_progress(input_dataset_dir=input_dataset_dir, current_results_dir=current_results_dir)
 
 def combine_results(prev_results_dir, recent_results_dir):
-## instantiate lists from previous run
+    """
+    This function combines the results of a previous run of a job with the results of a recent run.
+    It reads CSV files from both directories, concatenates them, and saves the combined dataframes to new CSV files.
+    
+    Args:
+        prev_results_dir (str): Path to the directory where the previous job stopped prematurely.
+        recent_results_dir (str): Path to the directory where the job was resumed and presumably ran to completion.
+
+    Returns:
+        new_combined_eval_df (pd.DataFrame): Combined dataframe of evaluations.
+        new_combined_result_df (pd.DataFrame): Combined dataframe of model results.
+    """
+    ## instantiate lists from previous run
     eval_dfs = []
     previous_combined_eval_df = []
     results_dfs = []

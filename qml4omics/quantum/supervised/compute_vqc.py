@@ -14,6 +14,32 @@ from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 def compute_vqc(X_train, X_test, y_train, y_test, args, verbose=False, model='VQC', data_key = '',
                 local_optimizer: Literal['COBYLA', 'L_BFGS_B', 'GradientDescent']="COBYLA", maxiter=100,
                 encoding = 'Z', entanglement = 'linear', reps= 2,primitive = 'sampler', ansatz_type='amp'):
+    """
+    This function computes a Variational Quantum Classifier (VQC) using the Qiskit Machine Learning library.
+    It takes training and testing datasets, along with various parameters to configure the VQC model.
+    It initializes the quantum feature map, sets up the backend and session, and fits the VQC model to the training data.
+    It then predicts the labels for the test data and evaluates the model's performance.
+    The function returns the performance results, including accuracy, F1-score, AUC, runtime, as well as model parameters, and other relevant metrics.
+
+    Args:
+        X_train (array-like): Training feature set.
+        X_test (array-like): Testing feature set.
+        y_train (array-like): Training labels.
+        y_test (array-like): Testing labels.
+        args (dict): Dictionary containing configuration parameters for the VQC.
+        verbose (bool, optional): If True, prints additional information. Defaults to False.
+        model (str, optional): Model type. Defaults to 'VQC'.
+        data_key (str, optional): Key for the dataset. Defaults to ''.
+        local_optimizer (str, optional): Local optimizer to use. Defaults to 'COBYLA'.
+        maxiter (int, optional): Maximum number of iterations for the optimizer. Defaults to 100.
+        encoding (str, optional): Feature map encoding type. Defaults to 'Z'.
+        entanglement (str, optional): Entanglement strategy. Defaults to 'linear'.
+        reps (int, optional): Number of repetitions for the feature map and ansatz. Defaults to 2.
+        primitive (str, optional): Primitive type ('sampler' or 'estimator'). Defaults to 'sampler'.
+        ansatz_type (str, optional): Type of ansatz to use. Defaults to 'amp'.
+    Returns:
+        dict: Evaluation results including accuracy, time taken, and model parameters.
+    """
     beg_time = time.time()
      # choose a method for mapping your features onto the circuit
     feature_map, _ = qutils.get_feature_map(feature_map=encoding,

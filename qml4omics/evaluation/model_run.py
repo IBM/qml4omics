@@ -47,15 +47,23 @@ def model_run(X_train, X_test, y_train, y_test, data_key, args):
     datasets are processed, while the remaining arguments are passed from the config.yaml file. 
     
     Args:
-        X_train: the training portion of the input data features, for that particular split. 
-        X_test: the test portion of the input data features, for that particular split. 
-        y_train: the training portion of the input data labels, for that particular split.
-        y_test: the test portion of the input data labels, for that particular split. 
-        args: additional arguments passed in from the config.yaml file
+        X_train (pd.DataFrame): Training features.
+        X_test (pd.DataFrame): Testing features.
+        y_train (pd.Series): Training labels.
+        y_test (pd.Series): Testing labels.
+        data_key (str): Key for the dataset being processed.
+        args (dict): Dictionary containing configuration parameters, including:
+            - model: List of models to run.
+            - n_jobs: Number of parallel jobs to run.
+            - grid_search: Boolean indicating whether to perform grid search.
+            - cross_validation: Cross-validation strategy.
+            - gridsearch_<model>_args: Arguments for grid search for each model.
+            - <model>_args: Additional arguments for each model.
         
     Returns:
-        model_total_result.to_dict(): a dictionary containing the model results for each method used. This dictionary can 
-                                      readily be converted to a Pandas Dataframe.
+        model_total_result (dict): A dictionary containing the results of the models run, with keys as model names and values as their respective results.
+        This dictionary can readily be converted to a Pandas Dataframe, as seen in the 'ModelResults.csv' files that are produced in the results directory
+        when the main profiler is run (qml4omics-profiler.py).
     
     """
     

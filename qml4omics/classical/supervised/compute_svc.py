@@ -18,6 +18,35 @@ def compute_svc(X_train, X_test, y_train, y_test, args, model='SVC', data_key = 
     """ This function generates a model using a Support Vector Classifier (svc) method as implemented in scikit-learn 
     (https://scikit-learn.org/1.5/modules/generated/sklearn.svm.SVC.html). It takes in parameter
     arguments specified in the config.yaml file, but will use the default parameters specified above if none are passed.
+    The model is trained on the training dataset and validated on the test dataset.  The model is trained on the training dataset and validated on the test dataset. 
+    The function returns the evaluation of the model on the test dataset, including accuracy, AUC, F1 score, and the time taken to train and validate the model.
+    This function is designed to be used in a supervised learning context, where the goal is to classify data points.
+
+    Args:
+        X_train (array-like): Training data features.
+        X_test (array-like): Test data features.
+        y_train (array-like): Training data labels.
+        y_test (array-like): Test data labels.
+        args (dict): Additional arguments, typically from a configuration file.
+        model (str): The type of model to use, default is 'SVC'.
+        data_key (str): Key for the dataset, default is an empty string.
+        C (float): Regularization parameter, default is 1.0.
+        kernel (str): Specifies the kernel type to be used in the algorithm, default is 'rbf'.
+        degree (int): Degree of the polynomial kernel function ('poly'), default is 3.
+        gamma (str or float): Kernel coefficient for 'rbf', 'poly', and 'sigmoid', default is 'scale'.
+        coef0 (float): Independent term in kernel function, default is 0.0.
+        shrinking (bool): Whether to use the shrinking heuristic, default is True.
+        probability (bool): Whether to enable probability estimates, default is False.
+        tol (float): Tolerance for stopping criteria, default is 0.001.
+        cache_size (int): Size of the kernel cache in MB, default is 200.
+        class_weight (dict or None): Weights associated with classes, default is None.
+        verbose (bool): Whether to print detailed logs, default is False.
+        max_iter (int): Hard limit on iterations within solver, -1 means no limit, default is -1.
+        decision_function_shape (str): Determines the shape of the decision function, default is 'ovr'.
+        break_ties (bool): Whether to break ties in multiclass classification, default is False.
+        random_state (int or None): Controls the randomness of the estimator, default is None.
+    Returns:
+        modeleval (dict): A dictionary containing the evaluation metrics of the model, including accuracy, AUC, F1 score, and the time taken to train and validate the model.
     """    
         
     beg_time = time.time()
@@ -40,6 +69,24 @@ def compute_svc_opt(X_train, X_test, y_train, y_test, args, verbose=False, cv=5,
     arguments specified in the config.yaml file, but will use the default parameters specified above if none are passed. The
     combination of parameters that led to the best performance is saved and returned as best_params, which can then be used on similar
     datasets, without having to run the grid search.
+    The model is trained on the training dataset and validated on the test dataset.  The model is trained on the training dataset and validated on the test dataset. 
+    The function returns the evaluation of the model on the test dataset, including accuracy, AUC, F1 score, and the time taken to train and validate the model across the grid search.
+    This function is designed to be used in a supervised learning context, where the goal is to classify data points.
+
+    Args:
+        X_train (array-like): Training data features.
+        X_test (array-like): Test data features.
+        y_train (array-like): Training data labels.
+        y_test (array-like): Test data labels.
+        args (dict): Additional arguments, typically from a configuration file.
+        verbose (bool): Whether to print detailed logs, default is False.
+        cv (int): Number of cross-validation folds, default is 5.
+        model (str): The type of model to use, default is 'SVC'.
+        C (list or float): Regularization parameter(s), default is an empty list.
+        gamma (list or str): Kernel coefficient(s) for 'rbf', 'poly', and 'sigmoid', default is an empty list.
+        kernel (list or str): Specifies the kernel type(s) to be used in the algorithm, default is an empty list.
+     Returns:
+        modeleval (dict): A dictionary containing the evaluation metrics of the model, including accuracy, AUC, F1 score, and the time taken to train and validate the model across the grid search.
     """   
 
     beg_time = time.time()

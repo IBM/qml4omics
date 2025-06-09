@@ -18,7 +18,10 @@ setup(
     version="0.0.1",         # Start with a small version number and increment as needed
     author="Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida",      # Replace with your name
     author_email="your.email@example.com", # Replace with your email
-    description=("A short description of your project."),
+    description=("This package automates the use the of classical and quantum machine learning as well as the generation of dataset complexity measures, and the subsequent correlations between these dataset complexity measures and "
+    "predictive model performance.  It allows for the profiling of omics datasets, including genomics, proteomics, metabolomics, and other healthcare and life science (HCLS data)"
+    "to identify the most suitable machine learning techniques for analysis.  The package includes an oracle (QSage), which trains on these correlations, allowing users to predict the performance of machine learning models on new datasets based on their complexity measures, before hand."
+    "This can then be used to guide a tailored selection of models for the main profiler function to run. "), # Short description of your project
     license="Apache 2.0",           # Choose an appropriate license (e.g., MIT, Apache 2.0, GPLv3)
     keywords="machine learning, omics, qml, oracle, profiler", # Keywords for your project
     url="https://github.com/IBM/qml4omics/tree/", # Replace with your project's URL (e.g., GitHub repo)
