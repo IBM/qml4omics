@@ -55,7 +55,7 @@ def run_apidoc(app):
             "--separate",
             "-o",
             os.path.join("docs/source/", "api"),
-            os.path.join("..", "qml4omics"),
+            os.path.join("../../", "qml4omics"),
         ]
     )
 
