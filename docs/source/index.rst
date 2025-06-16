@@ -26,17 +26,14 @@ documentation for details.
     Overview <overview.md>
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :caption: API
+    :maxdepth: 2
+    
+    Embeddings<api/qml4omics.embeddings>
+    Visualisation<api/qml4omics.visualization>
 
-   dsdasdsa
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: API
 
-   qml4omics<api/qml4omics>
-   
+
 Indices and tables
 ==================
 

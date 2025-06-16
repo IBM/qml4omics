@@ -1,9 +1,0 @@
-qml4omics
-=========
-
-.. toctree::
-   :maxdepth: 2
-
-   qml4omics<../api/qml4omics>
-   embeddings<../api/qml4omics.embeddings>
-   

@@ -10,6 +10,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 
 
@@ -21,7 +22,7 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx.ext.autodoc",
+extensions = [ "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
@@ -29,16 +30,20 @@ extensions = ["sphinx.ext.autodoc",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "sphinx_autodoc_typehints",
-    "sphinx_rtd_theme",'myst_parser']
+    "sphinx_rtd_theme",
+    "myst_parser"
+]
 
 templates_path = ['_templates']
-exclude_patterns = []
-
-root_doc = 'index'
+exclude_patterns = ["build", "Thumbs.db", ".DS_Store"]
 
 
-# -- Generate API (auto) documentation ------------------------------------------------
 
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+
+html_static_path = ['_static']
 
 def run_apidoc(app):
     """Generate API documentation"""
@@ -48,17 +53,16 @@ def run_apidoc(app):
     better_apidoc.main(
         [
             "better-apidoc",
-            #"-t",
-            #"_templates",
+            "-t",
+            os.path.join(".", "_templates"),
             "--force",
             "--no-toc",
             "--separate",
             "-o",
-            os.path.join("docs/source/", "api"),
-            os.path.join("../../", "qml4omics"),
+            os.path.join("source/", "api"),
+            os.path.join("..", "qml4omics"),
         ]
     )
-
 
 
 # -- Extension configuration -------------------------------------------------
@@ -73,16 +77,15 @@ coverage_ignore_functions = []
 coverage_ignore_classes = []
 
 coverage_show_missing_items = True
+html_theme = 'sphinx_rtd_theme'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
 
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+# -- Options for todo extension ----------------------------------------------
 
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
-
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
 
 def setup(app):
     app.connect("builder-inited", run_apidoc)

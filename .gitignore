@@ -6,3 +6,5 @@ __pychace__/*
 .DS_Store
 
 *.pyc
+
+docs/outputdir/*

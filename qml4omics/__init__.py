@@ -1,3 +1,4 @@
+
 # ====== Import our CML functions ======
 from qml4omics.classical.supervised.compute_svc import compute_svc, compute_svc_opt
 from qml4omics.classical.supervised.compute_dt import compute_dt, compute_dt_opt
@@ -26,3 +27,8 @@ from qml4omics.utils.dataset_checkpoint import checkpoint_restart
 from qml4omics.evaluation.model_evalutation import modeleval
 from qml4omics.evaluation.dataset_evaluation import evaluate
 from qml4omics.evaluation.model_run import model_run
+
+# ====== Import visualization functions ======
+from qml4omics.visualization.visualize_correlation import plot_results_correlation, compute_results_correlation 
+
+
