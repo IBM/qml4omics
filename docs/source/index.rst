@@ -23,14 +23,21 @@ documentation for details.
     :maxdepth: 2
     
     Prerequisite <installation.md>
-    Overview <overview.md>
+    
 
+.. toctree::
+    :caption: Gallery
+    :maxdepth: 2
+    
+    Overview <overview.md>
+    Tutorial <overview.md>
+    
+    
 .. toctree::
     :caption: API
     :maxdepth: 2
-    
-    Embeddings<api/qml4omics.embeddings>
-    Visualisation<api/qml4omics.visualization>
+
+    api_overview
 
 
 
