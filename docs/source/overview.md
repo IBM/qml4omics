@@ -1,3 +1,5 @@
+![qml4omics logo](img/qml4omics_logo.png)
+
 # Overview
 
 qml4omics is an open-source computational framework written in Python that facilitates analysis of omics data ... Within this toolkit are analytic methods that span ... for omics scale data.
