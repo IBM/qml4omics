@@ -6,13 +6,33 @@ Quick overview of the :ref:`methods` and :ref:`datasets` available in QML4Omics.
 
 Methods
 -------
+Depending on the underlying foundations in qml4omics can be....
 
 Embeddings
-^^^^^^^^^^^^^^
+^^^^^^^^^^
 Collection of common embeddings  (:mod:`qml4omics.embeddings`) functionalities.
 
 .. autosummary::
     ~qml4omics.embeddings.embed.get_embeddings
+
+
+Evaluation
+^^^^^^^^^^
+The :mod:`qml4omics.evaluation` submodule of qml4omics computes the evaluation metrics for the input dataset and the models.
+
+Data Evaluation
+""""""""""""""""
+Depending on the underlying mathematical foundations, they can be classified into the following categories: (i)..
+
+.. autosummary::
+    ~qml4omics.evaluation.dataset_evaluation.evaluate
+
+Model Evaluation
+""""""""""""""""
+
+.. autosummary::
+    ~qml4omics.evaluation.model_evaluation.modeleval
+
 
 
 Visualisation

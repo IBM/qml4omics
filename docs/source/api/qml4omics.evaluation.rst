@@ -14,7 +14,7 @@ qml4omics.evaluation package
        :maxdepth: 1
 
        qml4omics.evaluation.dataset_evaluation
-       qml4omics.evaluation.model_evalutation
+       qml4omics.evaluation.model_evaluation
        qml4omics.evaluation.model_run
 
 
