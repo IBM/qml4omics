@@ -6,11 +6,12 @@ from sklearn.manifold import (
     LocallyLinearEmbedding,
     SpectralEmbedding,
 )
-#from umap import UMAP
+from umap import UMAP
 
-def get_embeddings(embedding, X_train, X_test, n_neighbors=30, n_components=None, method=None):
+def get_embeddings(embedding: str, X_train, X_test, n_neighbors=30, n_components=None, method=None):
 
     """This function applies the specified embedding technique to the training and test datasets.
+
     Args:
         embedding (str): The embedding technique to use. Options are 'none', 'pca', 'nmf', 'lle', 'isomap', 'spectral', or 'umap'.
         X_train (array-like): The training dataset.
@@ -22,6 +23,12 @@ def get_embeddings(embedding, X_train, X_test, n_neighbors=30, n_components=None
     Returns:
         tuple: Transformed training and test datasets.
     """
+
+    embedding = embedding.lower()    
+    valid_modes = ['none', 'pca', 'lle', 'isomap', 'spectral', 'umap']
+    if embedding not in valid_modes:
+        raise ValueError(f"Invalid mode: {embedding}. Mode must be one of {valid_modes}")
+
 
     assert n_components <= X_train.shape[1], "number of components greater than number of feature in the dataset"
     if 'none' == embedding:
