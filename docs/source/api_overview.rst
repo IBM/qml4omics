@@ -48,12 +48,14 @@ Classical Models
 Classical model....
 
 .. autosummary::
-    ~qml4omics.classical.supervised.compute_dt 
-    ~qml4omics.classical.supervised.compute_lr 
-    ~qml4omics.classical.supervised.compute_mlp 
-    ~qml4omics.classical.supervised.compute_nb 
-    ~qml4omics.classical.supervised.compute_rf 
-    ~qml4omics.classical.supervised.compute_svc 
+    ~qml4omics.classical.supervised.compute_dt.compute_dt  
+    ~qml4omics.classical.supervised.compute_lr.compute_lr 
+    ~qml4omics.classical.supervised.compute_mlp.compute_mlp
+    ~qml4omics.classical.supervised.compute_nb.compute_nb 
+    ~qml4omics.classical.supervised.compute_rf.compute_rf
+    ~qml4omics.classical.supervised.compute_svc.compute_svc 
+
+Each of them has an alternative function where grid search parameter can be given as input. Details can be found in the specific :mod:`qml4omics.classical` submodules.
 
 Quantum Models
 """"""""""""""
