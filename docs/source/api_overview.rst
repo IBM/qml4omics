@@ -34,6 +34,10 @@ Model Evaluation
     ~qml4omics.evaluation.model_evaluation.modeleval
 
 
+Model Computation 
+^^^^^^^^^^^^^^^^^
+qml4omics brings together a number of established machine learning model both from classical and quantum. 
+
 
 Visualisation
 ^^^^^^^^^^^^^

@@ -4,3 +4,13 @@ qml4omics is an open-source computational framework written in Python that facil
 
 qml4omics provides access to individual tools as well as detailed use cases for analyses that demonstrate how multiple methodologies can be leveraged together.
 
+## Main components
+
+- Profiler
+- Sage
+
+### Profiler
+The `Profiler` ...
+
+### Sage
+The `Sage` ...

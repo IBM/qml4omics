@@ -29,9 +29,9 @@ documentation for details.
     :caption: Gallery
     :maxdepth: 2
     
-    Overview <overview.md>
-    Tutorial <overview.md>
-    
+    Overview of qml4omics <overview.md>
+    Tutorial <tutorial.md>
+
     
 .. toctree::
     :caption: API
