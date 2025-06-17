@@ -36,7 +36,10 @@ Model Evaluation
 
 Model Computation 
 ^^^^^^^^^^^^^^^^^
-qml4omics brings together a number of established machine learning model both from classical and quantum. 
+qml4omics brings together a number of established machine learning model both from classical and quantum.... 
+
+.. autosummary::
+    ~qml4omics.evaluation.model_run.model_run
 
 
 Visualisation
