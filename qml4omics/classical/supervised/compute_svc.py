@@ -9,7 +9,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.multiclass import OneVsOneClassifier, OneVsRestClassifier
 
 # ====== Additional local imports ======
-from qml4omics.evaluation.model_evalutation import modeleval
+from qml4omics.evaluation.model_evaluation import modeleval
     
 def compute_svc(X_train, X_test, y_train, y_test, args, model='SVC', data_key = '', C=1.0, kernel='rbf', 
                 degree=3, gamma='scale', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, 

@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # ====== Additional local imports ======
-from qml4omics.evaluation.model_evalutation import modeleval
+from qml4omics.evaluation.model_evaluation import modeleval
 import qml4omics.utils.qutils as qutils
 from sklearn.model_selection import GridSearchCV
 

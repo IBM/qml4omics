@@ -9,7 +9,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.multiclass import OneVsOneClassifier, OneVsRestClassifier
 
 # ====== Additional local imports ======
-from qml4omics.evaluation.model_evalutation import modeleval
+from qml4omics.evaluation.model_evaluation import modeleval
 
 def compute_nb(X_train, X_test, y_train, y_test, args, verbose=False, model='Naive Bayes',  data_key = '', var_smoothing=1e-09):
     

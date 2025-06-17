@@ -10,7 +10,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.multiclass import OneVsOneClassifier, OneVsRestClassifier
 
 # ====== Additional local imports ======
-from qml4omics.evaluation.model_evalutation import modeleval
+from qml4omics.evaluation.model_evaluation import modeleval
 
 # ====== Begin functions ======
 
