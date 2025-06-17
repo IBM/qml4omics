@@ -24,7 +24,7 @@ from qml4omics.utils.qc_winner_finder import qml_winner
 from qml4omics.utils.dataset_checkpoint import checkpoint_restart
 
 # ====== Import evaluation functions ======
-from qml4omics.evaluation.model_evalutation import modeleval
+from qml4omics.evaluation.model_evaluation import modeleval
 from qml4omics.evaluation.dataset_evaluation import evaluate
 from qml4omics.evaluation.model_run import model_run
 
