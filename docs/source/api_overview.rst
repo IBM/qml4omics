@@ -47,6 +47,13 @@ Classical Models
 
 Classical model....
 
+.. autosummary::
+    ~qml4omics.classical.supervised.compute_dt 
+    ~qml4omics.classical.supervised.compute_lr 
+    ~qml4omics.classical.supervised.compute_mlp 
+    ~qml4omics.classical.supervised.compute_nb 
+    ~qml4omics.classical.supervised.compute_rf 
+    ~qml4omics.classical.supervised.compute_svc 
 
 Quantum Models
 """"""""""""""

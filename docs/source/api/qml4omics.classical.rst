@@ -9,6 +9,13 @@ qml4omics.classical package
 
 
 
+    Subpackages:
+
+    .. toctree::
+       :maxdepth: 1
+
+       qml4omics.classical.supervised
+
 
 
 
