@@ -4,7 +4,7 @@
 config_file_name: 'basic_config'
 
 # specify output directory where input datasets are located
-folder_path: '/Users/krhriss/IBM/QBioCode/archive/data/tutorial_test_data/lower_dim_datasets'
+folder_path: 'archive/data/tutorial_test_data/lower_dim_datasets'
 file_dataset: 'ALL'
 # or use a list as below, to only select a few datasets
 # file_dataset: ['file1', 'file2', 'file3', etc]

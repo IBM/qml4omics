@@ -54,8 +54,7 @@ def main(args):
     log.info(f"Main program initiated")
     log.info(f"The number of ML methods being parallelized is {min(args['n_jobs'], len(args['model']))}")
     log.info(f"Chosen backend for quantum algorithms is: {args['backend']}") 
-    # path_to_input = os.path.join(current_dir, 'data', args['folder_path'])
-    path_to_input = args['folder_path']
+    path_to_input = os.path.join(dir_home, args['folder_path'])
     if args['file_dataset'] == 'ALL':
         input_files = [file for file in os.listdir(path_to_input) if file.endswith('csv')]
     else:
