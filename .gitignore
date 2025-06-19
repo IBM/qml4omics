@@ -1,4 +1,4 @@
-venv/*
+venv/
 docs/build/*
 
 __pychace__/*
@@ -8,3 +8,5 @@ __pychace__/*
 *.pyc
 
 docs/outputdir/*
+results/
+data/

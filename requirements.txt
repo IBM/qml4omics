@@ -17,6 +17,7 @@ scikit-learn==1.5.1
 scipy==1.13.1
 seaborn==0.13.2
 tensorflow==2.16.2
+torch==2.7.1
 tqdm==4.66.4
 umap-learn==0.5.7
 
