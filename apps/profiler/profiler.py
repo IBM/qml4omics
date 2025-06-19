@@ -20,7 +20,9 @@ from sklearn.model_selection import train_test_split
 # ====== Qiskit imports ======
 from qiskit_algorithms.utils import algorithm_globals
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'qbiocode'))
+import sys
+dir_home = re.sub( 'QBioCode.*', 'QBioCode', os.getcwd() )
+sys.path.append( dir_home )
 
 # ====== Scaling and encoding functions imports ======
 from qbiocode import scaler_fn, feature_encoding
