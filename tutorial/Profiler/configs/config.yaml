@@ -4,7 +4,7 @@
 config_file_name: 'basic_config'
 
 # specify output directory where input datasets are located
-folder_path: 'tutorial_test_data/lower_dim_datasets'
+folder_path: '/Users/krhriss/IBM/QBioCode/archive/data/tutorial_test_data/lower_dim_datasets'
 file_dataset: 'ALL'
 # or use a list as below, to only select a few datasets
 # file_dataset: ['file1', 'file2', 'file3', etc]
@@ -22,7 +22,7 @@ n_jobs: 9
 
 # select the embedding method for reducing dimensionality (number of features) in your data set
 # embeddings: ['none']
-embeddings: ['pca', 'nmf', 'none']
+embeddings: ['pca', 'isomap', 'none']
 
 # number of dimensions (features) to embed (reduce) your data down to
 n_components: 3

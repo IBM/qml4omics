@@ -22,7 +22,7 @@ from qiskit_ibm_runtime import SamplerV2 as Sampler
 from qiskit_ibm_runtime import Session
 from qiskit_ibm_transpiler.transpiler_service import TranspilerService
 
-from qml4omics.utils.ibm_account import instantiate_runtime_service
+from qbiocode.utils.ibm_account import instantiate_runtime_service
 
 
 def get_backend_session( args: dict, primitive : str, num_qubits : int ):

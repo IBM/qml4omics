@@ -10,7 +10,7 @@ import os
 import re
 import csv
 import time
-
+import sys
 # ====== Hydra imports ======
 import hydra
 
@@ -19,6 +19,8 @@ from sklearn.model_selection import train_test_split
 
 # ====== Qiskit imports ======
 from qiskit_algorithms.utils import algorithm_globals
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'qbiocode'))
 
 # ====== Scaling and encoding functions imports ======
 from qbiocode import scaler_fn, feature_encoding
@@ -50,7 +52,8 @@ def main(args):
     log.info(f"Main program initiated")
     log.info(f"The number of ML methods being parallelized is {min(args['n_jobs'], len(args['model']))}")
     log.info(f"Chosen backend for quantum algorithms is: {args['backend']}") 
-    path_to_input = os.path.join(current_dir, 'data', args['folder_path'])
+    # path_to_input = os.path.join(current_dir, 'data', args['folder_path'])
+    path_to_input = args['folder_path']
     if args['file_dataset'] == 'ALL':
         input_files = [file for file in os.listdir(path_to_input) if file.endswith('csv')]
     else:

@@ -1,20 +1,18 @@
 
-# ====== Import our CML functions ======
+# ====== Import learning functions ======
 from .learning.compute_svc import compute_svc, compute_svc_opt
 from .learning.compute_dt import compute_dt, compute_dt_opt
 from .learning.compute_nb import compute_nb, compute_nb_opt
 from .learning.compute_lr import compute_lr, compute_lr_opt
 from .learning.compute_rf import compute_rf, compute_rf_opt
 from .learning.compute_mlp import compute_mlp, compute_mlp_opt
-
-# ====== Import our QML functions ======
 from .learning.compute_qnn import compute_qnn
 from .learning.compute_qsvc import compute_qsvc
 from .learning.compute_vqc import compute_vqc
 from .learning.compute_pqk import compute_pqk
 
 
-# ====== Import our embedding functions ======
+# ====== Import embedding functions ======
 from .embeddings.embed import get_embeddings
 
 
