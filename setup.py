@@ -14,7 +14,7 @@ def read_requirements():
         return [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
 setup(
-    name="qml4omics",  # Replace with your project's name
+    name="qbiocode",  # Replace with your project's name
     version="0.0.1",         # Start with a small version number and increment as needed
     author="Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida",      # Replace with your name
     author_email="your.email@example.com", # Replace with your email
@@ -24,7 +24,7 @@ setup(
     "This can then be used to guide a tailored selection of models for the main profiler function to run. "), # Short description of your project
     license="Apache 2.0",           # Choose an appropriate license (e.g., MIT, Apache 2.0, GPLv3)
     keywords="machine learning, omics, qml, oracle, profiler", # Keywords for your project
-    url="https://github.com/IBM/qml4omics/tree/", # Replace with your project's URL (e.g., GitHub repo)
+    url="https://github.com/IBM/qbiocode/tree/", # Replace with your project's URL (e.g., GitHub repo)
     packages=find_packages(), # Automatically find all packages in your project
     long_description=read('README.md') if os.path.exists('README.md') else '', # Reads from README.md if present
     long_description_content_type='text/markdown', # Set this if your README is in Markdown

@@ -60,13 +60,13 @@ Once the activated, you'll see `(venv)` at the beginning of your terminal promt.
 
 1. Create the environment from the `requirements.txt` file.  This can be done using anaconda, miniconda, miniforge, or any other environment manager.
 ```
-conda create -n qml4omics python==3.11
+conda create -n qbiocode python==3.11
 
 ```
 * Note: if you receive the error `bash: conda: command not found...`, you need to install some form of anaconda to your development environment.
 2. Activate the new environment:
 ```
-conda activate qml4omics
+conda activate qbiocode
 pip install -r requirements.txt
 ```
 3. Verify that the new environment and packages were installed correctly:
@@ -79,8 +79,8 @@ pip list
    * [Set up / install Anaconda on remote linux server](https://kengchichang.com/post/conda-linux/)
    * [Set up remote development environment using VSCode](https://code.visualstudio.com/docs/remote/ssh) -->
 
-<a name="running_qml4omics"></a>
-<!-- ### Running qml4omics -->
+<a name="running_qbiocode"></a>
+<!-- ### Running qbiocode -->
 
 <!-- [![Notebook Template][notebook]](#running_comical) -->
 
@@ -93,9 +93,9 @@ Submit your job without the interactive session (shown later).  -->
 
 <!-- 2. Activate the new environment:
 ```
-conda activate qml4omics
+conda activate qbiocode
 ``` -->
-### qml4omics-profiler
+### qbiocode-profiler
 
 The profiler relies on a `config.yaml` file for tis setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.
 
@@ -109,13 +109,13 @@ The `config.yaml` file should be a structured in YAML format. Please refer to th
 
 #### Running via command prompt 
 ```
-python qml4omics-profiler.py --config-name=config.yaml
+python qbiocode-profiler.py --config-name=config.yaml
 ```
 
 
 ### Help
 ```
-python qml4omics-profiler.py --help
+python qbiocode-profiler.py --help
 ```
 
 ## Authors
