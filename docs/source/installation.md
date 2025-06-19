@@ -78,8 +78,8 @@ pip list
    * [Set up / install Anaconda on remote linux server](https://kengchichang.com/post/conda-linux/)
    * [Set up remote development environment using VSCode](https://code.visualstudio.com/docs/remote/ssh) -->
 
-<a name="running_qml4omics"></a>
-<!-- ### Running qml4omics -->
+<a name="running_qbiocode"></a>
+<!-- ### Running QBioCode -->
 
 <!-- [![Notebook Template][notebook]](#running_comical) -->
 
@@ -92,5 +92,5 @@ Submit your job without the interactive session (shown later).  -->
 
 <!-- 2. Activate the new environment:
 ```
-conda activate qml4omics
+conda activate qbiocode
 ``` -->

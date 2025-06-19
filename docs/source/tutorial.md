@@ -11,7 +11,7 @@ This tuorial show how to run the profiler on..
 
 
 ```python
-import qml4omics 
+import qbiocode as qbc 
 import numpy as np
 import pandas as pd
 from matplotlib import cm

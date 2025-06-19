@@ -1,8 +1,3 @@
-.. qbiocode documentation master file, created by
-   sphinx-quickstart on Tue May 13 13:45:45 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 
 QBioCode
 ===================================
@@ -29,33 +24,3 @@ documentation for details.
     
     Prerequisite <installation.md>
     
-
-.. toctree::
-    :caption: Gallery
-    :maxdepth: 2
-    
-    Overview of qbiocode <overview.md>
-    Tutorial <tutorial.md>
-
-.. toctree::
-    :caption: Applications
-    :maxdepth: 2
-    
-    Profiler <apps/profiler>
-    Sage <apps/sage>
-
-    
-.. toctree::
-    :caption: API
-    :maxdepth: 2
-
-    api_overview
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
