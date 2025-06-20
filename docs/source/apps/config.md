@@ -103,7 +103,7 @@ scaling: ['True']
 
 ## Model selection
 ML model can be selected as a list, between the following, options:
-`svc` (Support Vector Machine), `dt` (Decision Tree), `lr` (Logistic Regression), `nb` (Naive Bayes), `rf` (Random Forest), `mlp` (Multi-layer Perceptron), `qsvc` (Quantum svc), `vqc` (Variational Quantum Classifier), `qnn` (Quantum Neural Network), `pqk` (Projection Quantum Kernel). For instace if one would want to run all models, would set:
+`svc` ([Support Vector Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)), `dt` ([Decision Tree](https://scikit-learn.org/stable/modules/tree.html)), `lr` ([Logistic Regression](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)), `nb` ([Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)), `rf` ([Random Forest](https://scikit-learn.org/stable/modules/ensemble.html#forest)), `mlp` ([Multi-layer Perceptron](https://scikit-learn.org/stable/modules/neural_networks_supervised.html)), `qsvc` (Quantum svc), `vqc` (Variational Quantum Classifier), `qnn` (Quantum Neural Network), `pqk` (Projection Quantum Kernel). For instace if one would want to run all models, would set:
 
 ```yaml
 model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn', 'pqk']
