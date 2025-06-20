@@ -1,5 +1,6 @@
 venv/
 docs/build/*
+.env/
 
 __pychace__/*
 

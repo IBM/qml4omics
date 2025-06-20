@@ -4,7 +4,7 @@
  
 <img src="docs/source/img/QBioCode_logo.png" width="300" />
 
-QBioCode has been tested and is compatible with Python versions 3.9, 3.10, and 3.11. While it might work on other versions, these are the officially supported and tested ones. 
+QBioCode has been tested and is compatible with Python versions 3.9, 3.10, and 3.11. While it might work on other versions, these are the officially supported and tested ones.
 
 ## Getting Started
 

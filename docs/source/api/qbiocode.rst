@@ -8,6 +8,12 @@ qbiocode package
     
 
 
+    Submodules:
+
+    .. toctree::
+       :maxdepth: 1
+
+       qbiocode.version
 
     Subpackages:
 
