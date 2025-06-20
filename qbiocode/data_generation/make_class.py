@@ -12,9 +12,9 @@ np.random.seed(42)
 
 # parameters to vary across the configurations
 N_SAMPLES = list(range(100, 300, 50))
-N_FEATURES = list(range(100,1000,100))
-N_INFORMATIVE = list(range(200,800,400))
-N_REDUNDANT = list(range(200,800,400))
+N_FEATURES = list(range(10,60,10))
+N_INFORMATIVE = list(range(2,8,4))
+N_REDUNDANT = list(range(2,8,4))
 N_CLASSES = list(range(2, 4, 6))
 N_CLUSTERS_PER_CLASS = list(range(1, 2, 3))
 WEIGHTS = [[0.3, 0.7], [0.4, 0.6], [0.5, 0.5]]
