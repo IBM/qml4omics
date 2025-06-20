@@ -29,4 +29,9 @@ from .evaluation.model_run import model_run
 # ====== Import visualization functions ======
 from .visualization.visualize_correlation import plot_results_correlation, compute_results_correlation 
 
+# ====== Import data generation functions ======
+from .data_generation.generator import generate_data
+
+
+
 
