@@ -21,7 +21,7 @@ documentation for details.
 
 
 .. note::
-    Before you start, make sure that you have installed SeqAn correctly by following the  `Prerequisite <installation.md.>` guide.
+    Before you start, make sure that you have installed QBioCode correctly by following the  `Prerequisite <installation.md.>` guide.
 
 
 .. toctree::
