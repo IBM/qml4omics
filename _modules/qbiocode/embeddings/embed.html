@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qbiocode.embeddings.embed &mdash; qbiocode 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            qbiocode
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Prerequisite</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview of qbiocode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../apps/profiler.html">Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apps/sage.html">Sage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_overview.html">API Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qbiocode</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">qbiocode.embeddings.embed</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for qbiocode.embeddings.embed</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ====== Embedding functions imports ======</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCA</span> 
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">NMF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.manifold</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Isomap</span><span class="p">,</span>
+    <span class="n">LocallyLinearEmbedding</span><span class="p">,</span>
+    <span class="n">SpectralEmbedding</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">umap</span><span class="w"> </span><span class="kn">import</span> <span class="n">UMAP</span>
+
+<div class="viewcode-block" id="get_embeddings">
+<a class="viewcode-back" href="../../../api/qbiocode.embeddings.embed.html#qbiocode.embeddings.embed.get_embeddings">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_embeddings</span><span class="p">(</span><span class="n">embedding</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function applies the specified embedding technique to the training and test datasets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        embedding (str): The embedding technique to use. Options are &#39;none&#39;, &#39;pca&#39;, &#39;nmf&#39;, &#39;lle&#39;, &#39;isomap&#39;, &#39;spectral&#39;, or &#39;umap&#39;.</span>
+<span class="sd">        X_train (array-like): The training dataset.</span>
+<span class="sd">        X_test (array-like): The test dataset.</span>
+<span class="sd">        n_neighbors (int, optional): Number of neighbors for certain embeddings. Defaults to 30.</span>
+<span class="sd">        n_components (int, optional): Number of components for the embedding. If None, it defaults to the number of features in X_train.</span>
+<span class="sd">        method (str, optional): Method for Locally Linear Embedding. Defaults to None.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: Transformed training and test datasets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">embedding</span> <span class="o">=</span> <span class="n">embedding</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>    
+    <span class="n">valid_modes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;pca&#39;</span><span class="p">,</span> <span class="s1">&#39;lle&#39;</span><span class="p">,</span> <span class="s1">&#39;isomap&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral&#39;</span><span class="p">,</span> <span class="s1">&#39;umap&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">embedding</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_modes</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid mode: </span><span class="si">{</span><span class="n">embedding</span><span class="si">}</span><span class="s2">. Mode must be one of </span><span class="si">{</span><span class="n">valid_modes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+    <span class="k">assert</span> <span class="n">n_components</span> <span class="o">&lt;=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;number of components greater than number of feature in the dataset&quot;</span>
+    <span class="k">if</span> <span class="s1">&#39;none&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">embedding_model</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="s1">&#39;pca&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span>
+            <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span>
+                                <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;nmf&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span>
+            <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">NMF</span><span class="p">(</span>
+                                <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;lle&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span> 
+                <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">LocallyLinearEmbedding</span><span class="p">(</span>
+                                    <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
+                                    <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> 
+                                    <span class="n">method</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span>   
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">LocallyLinearEmbedding</span><span class="p">(</span>
+                                    <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
+                                    <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> 
+                                    <span class="n">method</span><span class="o">=</span><span class="s1">&#39;modified&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;isomap&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span> 
+            <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">Isomap</span><span class="p">(</span>
+                                <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
+                                <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> 
+                                <span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;spectral&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span> 
+            <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">SpectralEmbedding</span><span class="p">(</span>
+                                <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> 
+                                <span class="n">eigen_solver</span><span class="o">=</span><span class="s2">&quot;arpack&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;umap&#39;</span> <span class="o">==</span> <span class="n">embedding</span><span class="p">:</span> 
+            <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">UMAP</span><span class="p">(</span>
+                                <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
+                                <span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> 
+                                <span class="p">)</span>
+
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+        <span class="n">X_test</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 IBM Research, Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
