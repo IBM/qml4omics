@@ -102,7 +102,8 @@ scaling: ['True']
 ```
 
 ## Model selection
-ML model can be selected as a list:
+ML model can be selected as a list, between the following, options:
+`svc` (Support Vector Machine), `dt` (Decision Tree), `lr` (Logistic Regression), `nb` (Naive Bayes), `rf` (Random Forest), `mlp` (Multi-layer Perceptron), `qsvc` (Quantum svc), `vqc` (Variational Quantum Classifier), `qnn` (Quantum Neural Network), `pqk` (Projection Quantum Kernel). For instace if one would want to run all models, would set:
 
 ```yaml
 model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn', 'pqk']
