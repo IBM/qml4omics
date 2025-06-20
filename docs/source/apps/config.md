@@ -112,6 +112,19 @@ model: ['svc', 'dt', 'lr', 'nb', 'rf', 'mlp', 'qsvc', 'vqc', 'qnn', 'pqk']
 parameters to use for each ML method could be set.
 Each CML method will have a grid search set of arguments as well as a standard set of arguments to pass, which will usually be the same as the grid search arguments except not as a list of parameters to iterate over.
 
+For instance, for `svc`:
+
+```yaml
+svc_args: { 'C': 0.01, 'gamma': 0.1, kernel: 'linear' }
+
+gridsearch_svc_args: {'C': [0.1, 1, 10, 100], 
+                      'gamma': [0.001, 0.01, 0.1, 1],
+                      'kernel': ['linear', 'rbf', 'poly','sigmoid']
+                     }
+```
+
+Parameter name and range values description can be found in the corresponding sklearn page for CML. 
+
 ```{Note}
 For QML grid search, one must use generate_experiments.ipynb in tutorial_notebooks/analyses/qml_experiment_generators/,
 which will generate individual config.yaml files for each combination of parameters.
