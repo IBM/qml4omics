@@ -67,7 +67,7 @@ def main(args):
     # start count
     file_count = 0 
     for file in sorted(input_files):
-        
+        print(f"Processing file: {file}")
         # this is where the seed needs to be set so the splits are consistent
         np.random.seed(args['seed']) 
         algorithm_globals.random_seed = args['q_seed']
@@ -95,6 +95,10 @@ def main(args):
         raw_data_eval = evaluate(df_dataset, y_encoded, file)
         appended_raw_data_eval.append(raw_data_eval)
 
+        # create csv file storing the evaluation of the raw, unembedded data    
+        all_raw_data_evaluation = pd.concat(appended_raw_data_eval)
+        all_raw_data_evaluation.to_csv('RawDataEvaluation.csv', index=False)
+        
         # log info
         log.info(f"Started processing data set {file}")
         
@@ -174,10 +178,6 @@ def main(args):
         log.info(f"The total run time for data set {file} is: \n{dataset_run_time}")
         log.info(f"Program has processed {file_count} out of {len(input_files)} data sets")
         log.info(f"Program has {len(input_files)-file_count} data sets left to process")
-        
-    # create csv file storing the evaluation of the raw, unembedded data    
-    all_raw_data_evaluation = pd.concat(appended_raw_data_eval)
-    all_raw_data_evaluation.to_csv('RawDataEvaluation.csv', index=False)
     
     # log total run time of entire job
     total_run_time = time.time() - beg_time

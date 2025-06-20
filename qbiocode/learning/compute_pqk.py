@@ -53,8 +53,11 @@ def compute_pqk(X_train, X_test, y_train, y_test, args, model='PQK', data_key = 
     beg_time = time.time()
     feat_dimension = X_train.shape[1]
 
-    file_projection_train = 'qpk_projection_' + data_key + '_train.npy'
-    file_projection_test = 'qpk_projection_' + data_key + '_test.npy'
+    if not os.path.exists( 'pqk_projections'):
+        os.makedirs('pqk_projections')
+
+    file_projection_train = os.path.join( 'pqk_projections', 'pqk_projection_' + data_key + '_train.npy')
+    file_projection_test = os.path.join( 'pqk_projections', 'pqk_projection_' + data_key + '_test.npy')
 
     
     #  This function ensures that all multiplicative factors of data features inside single qubit gates are 1.0
