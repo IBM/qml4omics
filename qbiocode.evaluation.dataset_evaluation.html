@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qbiocode.evaluation.dataset_evaluation module &mdash; qbiocode 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            qbiocode
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Prerequisite</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview of qbiocode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apps/profiler.html">Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/sage.html">Sage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_overview.html">API Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">qbiocode</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qbiocode.evaluation.dataset_evaluation module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/qbiocode.evaluation.dataset_evaluation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-qbiocode.evaluation.dataset_evaluation">
+<span id="qbiocode-evaluation-dataset-evaluation-module"></span><h1>qbiocode.evaluation.dataset_evaluation module<a class="headerlink" href="#module-qbiocode.evaluation.dataset_evaluation" title="Link to this heading"></a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.evaluate" title="qbiocode.evaluation.dataset_evaluation.evaluate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate</span></code></a></p></td>
+<td><p>This function evaluates a dataset and returns a transposed summary DataFrame with various statistical measures, derived from the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_coefficient_var" title="qbiocode.evaluation.dataset_evaluation.get_coefficient_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coefficient_var</span></code></a></p></td>
+<td><p>Get coefficient of variance</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_complexity" title="qbiocode.evaluation.dataset_evaluation.get_complexity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_complexity</span></code></a></p></td>
+<td><p>Measure the manifold complexity by fitting Isomap and analyzing the geodesic vs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_condition_number" title="qbiocode.evaluation.dataset_evaluation.get_condition_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_condition_number</span></code></a></p></td>
+<td><p>Get condition number of a matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_dimensions" title="qbiocode.evaluation.dataset_evaluation.get_dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dimensions</span></code></a></p></td>
+<td><p>Get the number of features, samples, and feature-to-sample ratio from a DataFrame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_entropy" title="qbiocode.evaluation.dataset_evaluation.get_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_entropy</span></code></a></p></td>
+<td><p>Calculate entropy of the target variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_fdr" title="qbiocode.evaluation.dataset_evaluation.get_fdr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fdr</span></code></a></p></td>
+<td><p>Calculate Fisher Discriminant Ratio for a given dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_fractal_dim" title="qbiocode.evaluation.dataset_evaluation.get_fractal_dim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fractal_dim</span></code></a></p></td>
+<td><p>Calculate the fractal dimension of the data using Higuchi's method</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_intrinsic_dim" title="qbiocode.evaluation.dataset_evaluation.get_intrinsic_dim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_intrinsic_dim</span></code></a></p></td>
+<td><p>Get intrinsic dimension of the data using lPCA from skdim.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_log_density" title="qbiocode.evaluation.dataset_evaluation.get_log_density"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_log_density</span></code></a></p></td>
+<td><p>Calculate the mean log density of the data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_low_var_features" title="qbiocode.evaluation.dataset_evaluation.get_low_var_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_low_var_features</span></code></a></p></td>
+<td><p>Calculate get count of low variance features</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_moments" title="qbiocode.evaluation.dataset_evaluation.get_moments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_moments</span></code></a></p></td>
+<td><p>Compute third and fourth order moments of the data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_mutual_information" title="qbiocode.evaluation.dataset_evaluation.get_mutual_information"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mutual_information</span></code></a></p></td>
+<td><p>Calculate mutual information via sklearn</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_nnz" title="qbiocode.evaluation.dataset_evaluation.get_nnz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_nnz</span></code></a></p></td>
+<td><p>Calculate nonzero values in the data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_total_correlation" title="qbiocode.evaluation.dataset_evaluation.get_total_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_total_correlation</span></code></a></p></td>
+<td><p>Calculate Total Correlation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_variance" title="qbiocode.evaluation.dataset_evaluation.get_variance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_variance</span></code></a></p></td>
+<td><p>Get variance</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.evaluation.dataset_evaluation.get_volume" title="qbiocode.evaluation.dataset_evaluation.get_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_volume</span></code></a></p></td>
+<td><p>Get volume of the data from Convex Hull</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_dimensions">
+<span class="sig-name descname"><span class="pre">get_dimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_dimensions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_dimensions" title="Link to this definition"></a></dt>
+<dd><p>Get the number of features, samples, and feature-to-sample ratio from a DataFrame.
+:type df: 
+:param df: Dataset in pandas with observation in rows, features in columns
+:type df: pandas.DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>(num_features, num_samples, ratio)</dt><dd><ul class="simple">
+<li><p>num_features (int): Number of features in the DataFrame</p></li>
+<li><p>num_samples (int): Number of samples in the DataFrame</p></li>
+<li><p>ratio (float): Feature-to-sample ratio</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_intrinsic_dim">
+<span class="sig-name descname"><span class="pre">get_intrinsic_dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_intrinsic_dim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_intrinsic_dim" title="Link to this definition"></a></dt>
+<dd><p>Get intrinsic dimension of the data using lPCA from skdim.
+:type df: 
+:param df: Dataset in pandas with observation in rows, features in columns
+:type df: pandas.DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intrinsic dimension of the data</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_condition_number">
+<span class="sig-name descname"><span class="pre">get_condition_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_condition_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_condition_number" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Get condition number of a matrix.</dt><dd><p>A function with a high condition number is said to be ill-conditioned.
+Ill conditioned matrices produce large errors in its output even with small errors in its input.
+Low condition number means more stable errors.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>condition number of the matrix represented in df</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_fdr">
+<span class="sig-name descname"><span class="pre">get_fdr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_fdr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_fdr" title="Link to this definition"></a></dt>
+<dd><p>Calculate Fisher Discriminant Ratio for a given dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – supervised binary class label</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fisher Discriminant ratio</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_total_correlation">
+<span class="sig-name descname"><span class="pre">get_total_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_total_correlation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_total_correlation" title="Link to this definition"></a></dt>
+<dd><p>Calculate Total Correlation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Total correlation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_mutual_information">
+<span class="sig-name descname"><span class="pre">get_mutual_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_mutual_information"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_mutual_information" title="Link to this definition"></a></dt>
+<dd><p>Calculate mutual information via sklearn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – supervised binary class label</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mutual information</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_variance">
+<span class="sig-name descname"><span class="pre">get_variance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_variance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_variance" title="Link to this definition"></a></dt>
+<dd><p>Get variance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean variance
+std_var (float): Standard deviation of variance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>avg_var (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_coefficient_var">
+<span class="sig-name descname"><span class="pre">get_coefficient_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_coefficient_var"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_coefficient_var" title="Link to this definition"></a></dt>
+<dd><p>Get coefficient of variance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean coefficient of variance
+std_var (float): Standard deviation of coefficient of variance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>avg_co_of_v (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_nnz">
+<span class="sig-name descname"><span class="pre">get_nnz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_nnz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_nnz" title="Link to this definition"></a></dt>
+<dd><p>Calculate nonzero values in the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>nonzero count</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_low_var_features">
+<span class="sig-name descname"><span class="pre">get_low_var_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_features</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_low_var_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_low_var_features" title="Link to this definition"></a></dt>
+<dd><p>Calculate get count of low variance features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p></li>
+<li><p><strong>num_features</strong> (<em>int</em>) – number of features in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no feature is strong enough to keep</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>count of features with low variance</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_log_density">
+<span class="sig-name descname"><span class="pre">get_log_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_log_density"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_log_density" title="Link to this definition"></a></dt>
+<dd><p>Calculate the mean log density of the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mean log kernel density</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_fractal_dim">
+<span class="sig-name descname"><span class="pre">get_fractal_dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_max</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_fractal_dim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_fractal_dim" title="Link to this definition"></a></dt>
+<dd><p>Calculate the fractal dimension of the data using Higuchi’s method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p></li>
+<li><p><strong>k_max</strong> (<em>int</em>) – Maximum number of k values to use in the calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fractal dimension of the data</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_moments">
+<span class="sig-name descname"><span class="pre">get_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_moments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_moments" title="Link to this definition"></a></dt>
+<dd><p>Compute third and fourth order moments of the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean skewness
+std_skew (float): Standard deviation of skewness
+avg_kurt (float): Mean kurtosis
+std_kurt (float): Standard deviation of kurtosis</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>avg_skew (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_entropy">
+<span class="sig-name descname"><span class="pre">get_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_entropy" title="Link to this definition"></a></dt>
+<dd><p>Calculate entropy of the target variable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>y</strong> (<em>int</em>) – supervised binary class label</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mean entropy
+std_y_entropy (flat): standard deviation of entropy</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>avg_y_entropy (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_volume">
+<span class="sig-name descname"><span class="pre">get_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_volume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_volume" title="Link to this definition"></a></dt>
+<dd><p>Get volume of the data from Convex Hull</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Volume of the space spanned by the features of the data</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>volume (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.get_complexity">
+<span class="sig-name descname"><span class="pre">get_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#get_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.get_complexity" title="Link to this definition"></a></dt>
+<dd><p>Measure the manifold complexity by fitting Isomap and analyzing the geodesic vs. Euclidean distances.
+This function computes the reconstruction error of the Isomap algorithm, which serves as an indicator of the complexity of the manifold represented by the data.</p>
+<p>Args:
+df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns</p>
+<p>Parameters:
+- data: Input data, shape (n_samples, n_features)
+- n_neighbors: Number of neighbors for the Isomap algorithm
+- n_components: Number of components (dimensions) for Isomap projection</p>
+<p>Returns:
+- reconstruction_error: float</p>
+<blockquote>
+<div><p>The reconstruction error of the Isomap model, which indicates the complexity of the manifold.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>reconstruction_error: The residual error of geodesic distances</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.evaluation.dataset_evaluation.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/evaluation/dataset_evaluation.html#evaluate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.evaluation.dataset_evaluation.evaluate" title="Link to this definition"></a></dt>
+<dd><p>This function evaluates a dataset and returns a transposed summary DataFrame with various statistical measures, derived from the dataset.
+Using the functions defined above, it computes intrinsic dimension, condition number, Fisher Discriminant Ratio, total correlation, mutual information, variance, coefficient of variation,
+data sparsity, low variance features, data density, fractal dimension, data distributions (skewness and kurtosis), entropy of the target variable, and manifold complexity.
+The summary DataFrame is transposed for easier readability and contains the dataset name, number of features, number of samples, feature-to-sample ratio, and various statistical measures.
+This function is useful for quickly summarizing the characteristics of a dataset, especially in the context of machine learning and data analysis, allowing you to correlate the dataset’s
+properties with its performance in predictive modeling tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataset in pandas with observation in rows, features in columns</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – supervised binary class label</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – Name of the dataset file for identification in the summary DataFrame</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Summary DataFrame containing various statistical measures of the dataset</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>transposed (pandas.DataFrame)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 IBM Research, Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

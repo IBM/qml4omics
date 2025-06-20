@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qbiocode.visualization.visualize_correlation module &mdash; qbiocode 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            qbiocode
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Prerequisite</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview of qbiocode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apps/profiler.html">Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/sage.html">Sage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_overview.html">API Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">qbiocode</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qbiocode.visualization.visualize_correlation module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/qbiocode.visualization.visualize_correlation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-qbiocode.visualization.visualize_correlation">
+<span id="qbiocode-visualization-visualize-correlation-module"></span><h1>qbiocode.visualization.visualize_correlation module<a class="headerlink" href="#module-qbiocode.visualization.visualize_correlation" title="Link to this heading"></a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qbiocode.visualization.visualize_correlation.compute_results_correlation" title="qbiocode.visualization.visualize_correlation.compute_results_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_results_correlation</span></code></a></p></td>
+<td><p>This function takes in as input a Pandas Dataframe containing the results and data evaluations for a given dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qbiocode.visualization.visualize_correlation.plot_results_correlation" title="qbiocode.visualization.visualize_correlation.plot_results_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_results_correlation</span></code></a></p></td>
+<td><p>This function plots the spearman correlation dot plots using the previously generated correlations_df dataframe.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.visualization.visualize_correlation.compute_results_correlation">
+<span class="sig-name descname"><span class="pre">compute_results_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correlation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spearman'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/visualization/visualize_correlation.html#compute_results_correlation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.visualization.visualize_correlation.compute_results_correlation" title="Link to this definition"></a></dt>
+<dd><p>This function takes in as input a Pandas Dataframe containing the results and data evaluations for
+a given dataset.  It then produces a spearman correlation between the data evaluation characteristics (features)
+and instances where an F1 score was observed above a certain threshold (thresh).
+The function returns the input DataFrame with additional columns for datatype and model_embed_datatype,
+as well as a new DataFrame containing the computed correlations between metrics and features.
+The correlation is computed for each model-embedding-dataset combination, and the results are aggregated.
+The features considered for correlation include various data characteristics such as ‘Feature_Samples_ratio’, ‘Intrinsic_Dimension’, etc.
+The metrics considered for correlation include ‘accuracy’, ‘f1_score’, ‘time’, and ‘auc’.
+The function also calculates the median metric value and the fraction of instances above the specified threshold for each combination.
+The resulting DataFrame contains the model-embedding-dataset, metric, feature, median metric value, fraction above threshold, and the computed correlation.
+This function is useful for understanding how different data characteristics relate to model performance metrics, particularly in the context of machine learning models applied to datasets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results_df</strong> (<em>pd.DataFrame</em>) – A DataFrame containing the results and data evaluations.</p></li>
+<li><p><strong>correlation</strong> (<em>str</em>) – The type of correlation to compute, default is ‘spearman’.</p></li>
+<li><p><strong>thresh</strong> (<em>float</em>) – The threshold for F1 score to consider, default is 0.7.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The input DataFrame with additional columns for datatype and model_embed_datatype.
+correlations_df (pd.DataFrame): A DataFrame containing the computed correlations between metrics and features.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>results_df (pd.DataFrame)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qbiocode.visualization.visualize_correlation.plot_results_correlation">
+<span class="sig-name descname"><span class="pre">plot_results_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correlations_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'f1_score'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correlation_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'correlation'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qbiocode/visualization/visualize_correlation.html#plot_results_correlation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qbiocode.visualization.visualize_correlation.plot_results_correlation" title="Link to this definition"></a></dt>
+<dd><p>This function plots the spearman correlation dot plots using the previously generated correlations_df dataframe.
+The larger the circle, the higher the F1 score for that particular data set. The circle colors correspond to the
+correlations between the data characteristics (evaluations) and the F1 score. Red corresponds to a postive
+correlation, while blue indicates an anti-correlation.  The strength of either type of correlation is represented by
+the shade of coloring – the darker the circle, the more correlated/anticorrelated that particular characteristic is
+to the model’s performance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlations_df</strong> (<em>pd.DataFrame</em>) – A DataFrame containing the computed correlations between metrics and features.</p></li>
+<li><p><strong>metric</strong> (<em>str</em>) – The metric to plot, default is ‘f1_score’.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The title of the plot, default is an empty string.</p></li>
+<li><p><strong>correlation_type</strong> (<em>str</em>) – The type of correlation to display in the legend, default is an empty string.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em>) – The size of the figure, default is (6, 6).</p></li>
+<li><p><strong>save_file_path</strong> (<em>str</em>) – The file path to save the plot, default is an empty string.</p></li>
+<li><p><strong>size</strong> (<em>str</em>) – The column name to use for the size of the dots, default is ‘correlation’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Displays the plot and saves it to the specified file path if provided.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 IBM Research, Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

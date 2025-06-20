@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; qbiocode 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="overview.html" />
+    <link rel="prev" title="QBioCode" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            qbiocode
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prerequisite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#option-1-setting-up-a-python-virtual-enviroment-venv">Option 1: Setting up a Python Virtual Enviroment (venv)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#option-2-setting-up-a-conda-enviroment">Option 2: Setting up a Conda Enviroment</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview of qbiocode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apps/profiler.html">Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/sage.html">Sage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qbiocode</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p><a class="reference external" href="https://www.python.org/downloads/"><img alt="Minimum Python Version" src="https://img.shields.io/badge/Python-%3E=%203.9-blue" /></a> <a class="reference external" href="https://www.python.org/downloads/"><img alt="Maximum Python Version Tested" src="https://img.shields.io/badge/Python-%3C=%203.11-blueviolet" /></a> <a class="reference external" href="https://www.python.org/downloads/"><img alt="Supported Python Versions" src="https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-blue" /></a></p>
+<p>This project has been tested and is compatible with Python versions 3.9, 3.10, and 3.11. While it might work on other versions, these are the officially supported and tested ones.</p>
+<section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<p>Before you can run this project, you need to have python installed on your system</p>
+<section id="option-1-setting-up-a-python-virtual-enviroment-venv">
+<h2>Option 1: Setting up a Python Virtual Enviroment (venv)<a class="headerlink" href="#option-1-setting-up-a-python-virtual-enviroment-venv" title="Link to this heading"></a></h2>
+<p>This is the standard way to create an isolated Python enviroment.</p>
+<p><strong>Steps:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Install pip (if you don’t have it):</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span>--default-pip
+</pre></div>
+</div>
+<p>or on some systems:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Create a virtual enviroment:</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</pre></div>
+</div>
+<p>This command creatas a new directory named <code class="docutils literal notranslate"><span class="pre">venv</span></code> (you can choose a different name if you prefer) containing a copy of the Python interpreter and necessary supporting files.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Activate the virtual enviroment:</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>On macOS and Linux:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>On Windows (command promt):</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>On Windows (PowerShell):</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
+</pre></div>
+</div>
+<p>Once the activated, you’ll see <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> at the beginning of your terminal promt.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Install project dependencies:</strong>
+Once the virtual enviroment is activated, you can install the required packages listed in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w">  </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<ol class="arabic" start="5">
+<li><p><strong>Deactivate the virtual enviroment (when you are done):</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>deactivate
+</pre></div>
+</div>
+<p>This will return you to your base Python enviroment.</p>
+</li>
+</ol>
+</section>
+<section id="option-2-setting-up-a-conda-enviroment">
+<h2>Option 2: Setting up a Conda Enviroment<a class="headerlink" href="#option-2-setting-up-a-conda-enviroment" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create the environment from the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.  This can be done using anaconda, miniconda, miniforge, or any other environment manager.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">qml4omics</span> <span class="n">python</span><span class="o">==</span><span class="mf">3.11</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Note: if you receive the error <code class="docutils literal notranslate"><span class="pre">bash:</span> <span class="pre">conda:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found...</span></code>, you need to install some form of anaconda to your development environment.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Activate the new environment:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">qml4omics</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Verify that the new environment and packages were installed correctly:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+<span class="n">pip</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<!-- * Additional resources:
+   * [Connect to computing cluster](http://ccc.pok.ibm.com:1313/gettingstarted/newusers/connecting/)
+   * [Set up / install Anaconda on remote linux server](https://kengchichang.com/post/conda-linux/)
+   * [Set up remote development environment using VSCode](https://code.visualstudio.com/docs/remote/ssh) -->
+<p><a name="running_qbiocode"></a></p>
+<!-- ### Running QBioCode -->
+<!-- [![Notebook Template][notebook]](#running_comical) -->
+<!-- 1. Request resources from computing cluster:
+```
+jbsub -cores 2+1 -q x86_1h -mem 5g -interactive bash
+```
+OR
+Submit your job without the interactive session (shown later).  -->
+<!-- 2. Activate the new environment:
+```
+conda activate qbiocode
+``` -->
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="QBioCode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 IBM Research, Bryan Raubenolt, Aritra Bose, Kahn Rhrissorrakrai, Filippo Utro, Akhil Mohan, Daniel Blankenberg, Laxmi Parida.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
