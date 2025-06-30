@@ -31,12 +31,14 @@ extensions = [ "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx_autodoc_typehints",
     "sphinx_rtd_theme",
-    "myst_parser"
+     "nbsphinx",
+   "myst_parser",
+  
+  # "myst_nb"
 ]
 
 templates_path = ['_templates']
 exclude_patterns = ["build", "Thumbs.db", ".DS_Store"]
-
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -44,6 +46,13 @@ exclude_patterns = ["build", "Thumbs.db", ".DS_Store"]
 
 
 html_static_path = ['_static']
+nbsphinx_execute = 'never' # O 'auto', 'always'. 'never'
+
+# Impostazioni di MyST-Parser
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 def run_apidoc(app):
     """Generate API documentation"""
@@ -76,8 +85,18 @@ coverage_ignore_modules = []
 coverage_ignore_functions = []
 coverage_ignore_classes = []
 
+
+myst_enable_extensions = [
+    "colon_fence",  # Ensures ::: blocks work
+  #  "linkify",
+    "strikethrough",
+    "tasklist",
+    # ... any other extensions you want
+]
+
+
 coverage_show_missing_items = True
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_rtd_theme' # 'furo'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
