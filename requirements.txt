@@ -27,3 +27,6 @@ sphinx-autodoc-typehints
 sphinx_rtd_theme
 myst_parser
 better_apidoc
+nbsphinx
+myst_nb
+furo
