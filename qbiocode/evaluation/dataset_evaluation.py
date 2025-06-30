@@ -284,24 +284,21 @@ def get_volume(df):
     
     return vol
 
-def get_complexity(df): 
-    """ 
-    Measure the manifold complexity by fitting Isomap and analyzing the geodesic vs. Euclidean distances.
+def get_complexity(df, n_neighbors=10, n_components=2): 
+    """ Measure the manifold complexity by fitting Isomap and analyzing the geodesic vs. Euclidean distances.
     This function computes the reconstruction error of the Isomap algorithm, which serves as an indicator of the complexity of the manifold represented by the data.
 
     Args:
-    df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
-    
-    Parameters:
-    - data: Input data, shape (n_samples, n_features)
-    - n_neighbors: Number of neighbors for the Isomap algorithm
-    - n_components: Number of components (dimensions) for Isomap projection
-    
+        df (pandas.DataFrame): Dataset in pandas with observation in rows, features in columns
+        n_neighbors: Number of neighbors for the Isomap algorithm. Default value 10
+        n_components: Number of components (dimensions) for Isomap projection.  Default value 2
+        
     Returns:
-    - reconstruction_error: float
-        The reconstruction error of the Isomap model, which indicates the complexity of the manifold.
-    - reconstruction_error: The residual error of geodesic distances
+        - reconstruction_error: float
+            The reconstruction error of the Isomap model, which indicates the complexity of the manifold.
+        - reconstruction_error: The residual error of geodesic distances
     """
+    
     isomap = Isomap(n_neighbors=10, n_components=2)
     isomap.fit(df.values)
     
