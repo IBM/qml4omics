@@ -3,21 +3,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. image:: img/QBioCode_logo.png
+   :alt: Project Q Logo
+   :align: center
 
+
+#######################################
 QBioCode
-===================================
+#######################################
 
-QBioCode is an open-source suite of computational resources to support quantum applications in healthcare and life science data.
-
+QBioCode is an open-source suite of computational resources dedicated to exploring and developing quantum applications tailored for healthcare and life science (HCLS) data.
+Our goal is to levearege unique capabilites of quantum compunting to tacke some of the most complex challanges in HCLS.
 Within this toolkit are analytic methods that span ... for omics scale data.
 
 QBioCode is easy to use and simplifies the development of new software tools. 
 QBioCode provides access to individual tools as well as detailed use cases for analyses that demonstrate how multiple methodologies can be leveraged together.
 
+----------------------------------------------------------
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Key Features
+========================
+
+* **Quantum algorithms for HLCS**: Dive into bioinformatics and computation biology applications powered by quantum insights.
+* **Open Source Collaboration**: Contribue to the code, sharing your code, and collaborate on groundbreaking research.
+* **Practical Examples**: Learn by doing with a collection of practical code example demonstrating how to implement quantum solution for various HLCS scenarios.
+
+----------------------------------------------------------
+
+
+Ready to dive into the world of quantum healthcare and life sciences?
 
 
 .. note::
@@ -28,15 +42,9 @@ documentation for details.
     :caption: Getting Started
     :maxdepth: 2
     
-    Prerequisite <installation.md>
-    
-
-.. toctree::
-    :caption: Gallery
-    :maxdepth: 2
-    
-    Overview of qbiocode <overview.md>
-    Tutorial <tutorial.md>
+    Installation <installation.md>
+    Tutorials <tutorials.md>
+    API <api_overview>
 
 .. toctree::
     :caption: Apps
@@ -44,13 +52,6 @@ documentation for details.
     
     Profiler <apps/profiler>
     Sage <apps/sage>
-
-    
-.. toctree::
-    :caption: API
-    :maxdepth: 2
-
-    api_overview
 
 
 
