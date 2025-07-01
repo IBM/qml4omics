@@ -54,7 +54,6 @@ backend: 'ibm_least'
 as well as the number of shoots:
 
 ```yaml
-# number of shoots
 shots: 1024
 ```
 
@@ -64,10 +63,22 @@ Level of error mitigation for the QML methods (ranges from 1-3) can be set as:
 resil_level: 1
 ```
 
-IBM runtime credential should be stored n your device, in case of json path, it can be specified for instance as:
+IBM runtime credential should be stored in your device, in case of json path, it can be specified for instance as:
 
 ```yaml
 qiskit_json_path: '~/.qiskit/qiskit-ibm.json'
+```
+
+in case of multiple accounts stored in your json, the account name alias (used when saving your runtime credentials) can be specified as:
+
+```yaml
+name: account_qbc
+```
+
+Optionally you can also specify the instance with your account under which to run your job.  If not included, it will search for an available instance under your account if you have multiple.
+
+```yaml
+ibm_instance: instance_name
 ```
 
 ## Embedding
