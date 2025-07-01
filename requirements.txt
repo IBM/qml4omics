@@ -30,3 +30,4 @@ better_apidoc
 nbsphinx
 myst_nb
 furo
+pydata-sphinx-theme
