@@ -45,6 +45,7 @@ Ready to dive into the world of quantum healthcare and life sciences?
     Installation <installation.md>
     Tutorials <tutorials.md>
     API <api_overview>
+    Citing <citing>
 
 .. toctree::
     :caption: Apps
