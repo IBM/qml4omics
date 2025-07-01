@@ -96,7 +96,37 @@ myst_enable_extensions = [
 
 
 coverage_show_missing_items = True
-html_theme = 'sphinx_rtd_theme' # 'furo'
+html_theme = 'pydata_sphinx_theme' #'sphinx_rtd_theme' # 'furo'
+
+html_show_sourcelink = False
+
+html_logo = "_static/QBioCode_logo.png"
+html_favicon = "_static/favicon.ico"
+
+html_theme_options = {
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/IBM/QBioCode",
+            "icon": "fab fa-github",
+            "type": "fontawesome",
+        }
+    ],
+    "show_prev_next": False,
+    "navbar_start": ["navbar-logo"],
+    "navbar_end": ["navbar-icon-links"],
+    "header_links_before_dropdown": 8,
+}
+
+html_context = {
+    "default_mode": "light",
+}
+
+html_sidebars = {
+    "index": [],
+    "examples/index": [],
+    "**": [],
+}
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"

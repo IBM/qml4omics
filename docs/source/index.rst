@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: img/QBioCode_logo.png
+.. image:: _static/QBioCode_logo.png
    :alt: Project Q Logo
    :align: center
 
@@ -48,16 +48,16 @@ Ready to dive into the world of quantum healthcare and life sciences?
 
 .. toctree::
     :caption: Apps
-    :maxdepth: 2
+    :maxdepth: 1
     
     Profiler <apps/profiler>
     Sage <apps/sage>
 
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
