@@ -37,11 +37,12 @@ def get_creds(args):
             # The items we want are actually in a nested dictionary, so we have to loop through the outer dictionary first, then the 
             # nested one.  This nested dictionary (outer_value) is actually the value for the key in the parent dictionary. 
             for outer_key, outer_value in creds.items():
-                for ibm_name in cred_source_dict.keys():
-                    if ibm_name not in rval:
-                        value = outer_value.get(ibm_name, None)
-                        if value:
-                            rval[ibm_name] = value
+                if 'name' in rval.keys() and outer_key == rval['name']:
+                    for ibm_name in cred_source_dict.keys():
+                        if ibm_name not in rval:
+                            value = outer_value.get(ibm_name, None)
+                            if value:
+                                rval[ibm_name] = value
         else:
             print('IBM credentials not found! Please verify that the path to your qiskit-ibm.json file is correct.')
     return rval

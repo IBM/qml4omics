@@ -15,7 +15,11 @@ file_dataset: 'ALL'
 backend: 'simulator'
 
 # IBM runtime credentials - they should be in your home directory by default, but if they are elsewhere, please change path below.
+# 'name' should be the account name alias you used when saving your runtime credentials.  This is relevant if you have multiple accounts stored in your json.
+# 'ibm_instance' is the instance with your account under which to run your job.  If not included, it will search for an available instance under your account if you have multiple.
 qiskit_json_path: '~/.qiskit/qiskit-ibm.json'
+name: 'cleveland_clinic'
+# ibm_instance: 
 
 # of ML methods to parallelize
 n_jobs: 9
