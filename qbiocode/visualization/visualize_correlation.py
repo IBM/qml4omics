@@ -94,7 +94,7 @@ def plot_results_correlation( correlations_df, metric = 'f1_score', title = '', 
     data['datatype'] = [ '_'.join( x.split('_')[2:] ) for x in data['model_embed_datatype']]
     data = data.sort_values( 'datatype' )
     data['model'] = [ re.sub( '_.*', '', x ) for x in data['model_embed_datatype']]
-    data = pd.concat( [data[ ~data['model'].isin( ['qsvc', 'qnn', 'vqc']) ], data[ data['model'].isin( ['qsvc', 'qnn', 'vqc']) ] ] )
+    data = pd.concat( [data[ ~data['model'].isin( ['qsvc', 'qnn', 'vqc', 'pqk']) ], data[ data['model'].isin( ['qsvc', 'qnn', 'vqc', 'pqk']) ] ] )
     fm = dict(zip( list(set(data['feature'])), range(len(set(data['feature']))) ) )
     data['feature_map'] = [ fm[x] for x in data['feature']]
     data['norm_size'] = [float(np.round(x*100)) for x in MinMaxScaler().fit_transform(data[size].values.reshape(-1,1))]
