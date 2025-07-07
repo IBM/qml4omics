@@ -274,7 +274,7 @@ class QuantumSage():
 
         return result
 
-    def plot_results(self, saveFile='' ):
+    def plot_results(self, figsize = (6,4), saveFile='' ):
 
         ''' This function plots the results of the sub-sages trained on the input data.
         It will create a bar plot for each metric showing the performance of each model, and a scatter plot of the predictions vs. true values.
@@ -303,20 +303,28 @@ class QuantumSage():
 
         results_df = results_df.melt(id_vars=['model', 'metric'])
         for metric in self._available_metrics:
-            plt.figure(figsize=(6,4))
+            plt.figure(figsize=figsize)
             sns.barplot(data = results_df[results_df['metric']==metric], x = 'variable', y = 'value', hue = 'model', hue_order=self._available_models)
             plt.title( "Predictive performance for each model for " + metric)
+            plt.xlabel( "Metric")
+            plt.ylabel( "Value" )
+            plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
             plt.tight_layout()
             if saveFile != '':
-                plt.savefig(saveFile)
+                plt.savefig( re.sub( '.pdf', '', saveFile) + '_' + metric + '_barplot.pdf', bbox_inches='tight' )
             plt.show()
             plt.close()
 
             toPlot = preds[ preds['metric'] == metric ]
-            plt.figure(figsize=(6,6))
+            plt.figure(figsize=figsize)
             plt.title( "Predictive performance for each model for " + metric)
             sns.scatterplot( data = toPlot, x = 'y_test', y = 'pred', hue = 'model' )
+            plt.xlabel( "Actual")
+            plt.ylabel( "Predicted" )
+            plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
             plt.tight_layout()
+            if saveFile != '':
+                plt.savefig( re.sub( '.pdf', '', saveFile) + '_' + metric + '_scatterplot.pdf', bbox_inches='tight' )
             plt.show()
             plt.close()
 
