@@ -25,7 +25,7 @@ def get_embeddings(embedding: str, X_train, X_test, n_neighbors=30, n_components
     """
 
     embedding = embedding.lower()    
-    valid_modes = ['none', 'pca', 'lle', 'isomap', 'spectral', 'umap']
+    valid_modes = ['none', 'pca', 'lle', 'isomap', 'spectral', 'umap', 'nmf']
     if embedding not in valid_modes:
         raise ValueError(f"Invalid mode: {embedding}. Mode must be one of {valid_modes}")
 
