@@ -37,4 +37,12 @@ To run QProfiler use the following command in your terminal
 
 
 
-    
+Help
+===========================
+
+You can also get extra information using the following command in your terminal  
+
+.. code-block:: bash
+
+python qbiocode-profiler.py --help
+
