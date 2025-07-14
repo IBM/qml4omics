@@ -36,7 +36,6 @@ To run QProfiler use the following command in your terminal
     python qbiocode-profiler.py --config-name=config.yaml
 
 
-
 Help
 ===========================
 
@@ -46,3 +45,5 @@ You can also get extra information using the following command in your terminal
 
     python qbiocode-profiler.py --help
 
+=======
+    
