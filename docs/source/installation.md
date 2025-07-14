@@ -59,13 +59,13 @@ Once the activated, you'll see `(venv)` at the beginning of your terminal promt.
 
 1. Create the environment from the `requirements.txt` file.  This can be done using anaconda, miniconda, miniforge, or any other environment manager.
 ```
-conda create -n qml4omics python==3.11
+conda create -n qbc python==3.11
 
 ```
 * Note: if you receive the error `bash: conda: command not found...`, you need to install some form of anaconda to your development environment.
 2. Activate the new environment:
 ```
-conda activate qml4omics
+conda activate qbc
 pip install -r requirements.txt
 ```
 3. Verify that the new environment and packages were installed correctly:
