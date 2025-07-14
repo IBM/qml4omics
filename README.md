@@ -102,7 +102,10 @@ conda activate qbiocode
 
 Via hte API available in the **QBioCode** framework, one can develop several application for the analysis of HCLS data, here a list of the applications developed so far:
 
-- QProfiler utilizes a novel CML and QML model profiling system based on various data complexity measures on the original data as well as linear and non-linear lower-dimensional embeddings of the data.
+- [QProfiler](https://ibm.github.io/QBioCode/apps/profiler.html) utilizes a novel CML and QML model profiling system based on various data complexity measures on the original data as well as linear and non-linear lower-dimensional embeddings of the data. Details can be found [here](https://ibm.github.io/QBioCode/apps/profiler.html)
+
+
+
 - QSage guides model selection based on the input data complexity metrics and model performance across various datasets. It allows the user to rank CML and QML models for an unseen dataset.
 
 
