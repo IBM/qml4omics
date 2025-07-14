@@ -20,6 +20,7 @@ qbiocode package
     .. toctree::
        :maxdepth: 1
 
+       qbiocode.data_generation
        qbiocode.embeddings
        qbiocode.evaluation
        qbiocode.learning

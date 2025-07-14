@@ -51,8 +51,8 @@ Ready to dive into the world of quantum healthcare and life sciences?
     :caption: Apps
     :maxdepth: 1
     
-    Profiler <apps/profiler>
-    Sage <apps/sage>
+    QProfiler <apps/profiler>
+    QSage <apps/sage>
 
 
 
