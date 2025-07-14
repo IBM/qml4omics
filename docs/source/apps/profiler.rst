@@ -44,5 +44,5 @@ You can also get extra information using the following command in your terminal
 
 .. code-block:: bash
 
-python qbiocode-profiler.py --help
+    python qbiocode-profiler.py --help
 
