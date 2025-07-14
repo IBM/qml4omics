@@ -98,22 +98,13 @@ Submit your job without the interactive session (shown later).  -->
 ```
 conda activate qbiocode
 ``` -->
-### qbiocode-profiler
 
-The profiler relies on a `config.yaml` file for tis setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.
+## Apps
 
-#### `config.yaml` Structure
+Via hte API available in the **QBioCode** framework, one can develop several application for the analysis of HCLS data, here a list of the applications developed so far:
 
-The `config.yaml` file should be a structured in YAML format. Please refer to the [`config.yaml`](./configs/config.yaml) file in this repository
-
-**Important:**
-* Ensure that the keys in your `config.yaml`  file match the expected configuration parameters.
-* The project will likely fail or behave unexpectedly if the `config.yaml` file is missing, incorrectly formatted, or contains incorrect values.
-
-#### Running via command prompt 
-```
-python qbiocode-profiler.py --config-name=config.yaml
-```
+- QProfiler utilizes a novel CML and QML model profiling system based on various data complexity measures on the original data as well as linear and non-linear lower-dimensional embeddings of the data.
+- QSage guides model selection based on the input data complexity metrics and model performance across various datasets. It allows the user to rank CML and QML models for an unseen dataset.
 
 
 ### Help
