@@ -110,10 +110,6 @@ The **QBioCode** framework allows for the development of several applications fo
 - QSage guides model selection based on the input data complexity metrics and model performance across various datasets. It allows the user to rank CML and QML models for an unseen dataset.
 
 
-### Help
-```
-python qbiocode-profiler.py --help
-```
 
 ## Authors
 
