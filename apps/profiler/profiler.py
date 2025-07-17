@@ -140,7 +140,7 @@ def main(args):
                 #log.info(f"\nThe characteristics of the embedding train dataset are: \n{evaluate_data}")
                 summary.update({'iteration': iter})
                 model_results.update({'iteration': iter})
-                data_key = '_'.join( [re.sub( '\..*', '', file ), embed, str(args["n_components"]), str(iter)])
+                data_key = '_'.join( [re.sub(r'\..*', '', file ), embed, str(args["n_components"]), str(iter)])
                 summary.update(model_run(X_train_emb, X_test_emb, y_train, y_test, data_key, args))
                 # print(summary)
                 for outerkey, outervalue in summary.items():

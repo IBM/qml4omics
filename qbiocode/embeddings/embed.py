@@ -68,6 +68,9 @@ def get_embeddings(embedding: str, X_train, X_test, n_neighbors=30, n_components
                                 )
 
         X_train = embedding_model.fit_transform(X_train)
-        X_test = embedding_model.transform(X_test)
+        if 'spectral' != embedding:
+            X_test = embedding_model.transform(X_test)
+        else: 
+            X_test = embedding_model.fit_transform(X_test)
     
     return X_train, X_test

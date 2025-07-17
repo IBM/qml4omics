@@ -4,7 +4,7 @@
 config_file_name: 'basic_config'
 
 # specify output directory where input datasets are located
-folder_path: 'tutorial_test_data/lower_dim_datasets'
+folder_path: 'tutorial/Artificial_data_generation/data/ld_data/'
 file_dataset: 'ALL'
 # or use a list as below, to only select a few datasets
 # file_dataset: ['file1', 'file2', 'file3', etc]
@@ -24,7 +24,7 @@ n_jobs: 10
 # select the embedding method for reducing dimensionality (number of features) in your data set
 # this always needs to be a list! even if you only want to use one embedding method, it still needs to be in a list.
 # embeddings: ['none']
-embeddings: ['pca', 'nmf', 'none']
+embeddings: ['pca', 'nmf', 'lle']
 
 # number of dimensions (features) to embed (reduce) your data down to
 n_components: 3
