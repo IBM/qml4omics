@@ -13,7 +13,7 @@ from .learning.compute_pqk import compute_pqk
 
 
 # ====== Import embedding functions ======
-from .embeddings.embed import get_embeddings
+from .embeddings.embed import get_embeddings, pqk
 
 
 # ====== Import helper functions ======
