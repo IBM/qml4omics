@@ -28,7 +28,7 @@ def compute_pqk(X_train, X_test, y_train, y_test, args, model='PQK', data_key = 
     It supports various configurations such as encoding methods, entanglement strategies, and repetitions
     of the feature map. The results are saved to files for training and test projections, which are reused
     if they already exist to avoid redundant computations.
-    This function is part of the main quantum machine learning pipeline (qml4omics-profiler.py) and is intended for use in supervised learning tasks.
+    This function is part of the main quantum machine learning pipeline (QProfiler.py) and is intended for use in supervised learning tasks.
     It leverages quantum computing to enhance feature extraction and classification performance on complex datasets.
     The function returns the performance results, including accuracy, F1-score, AUC, runtime, as well as model parameters, and other relevant metrics.
     
