@@ -1,6 +1,7 @@
 venv/
 docs/build/*
 .env/
+.env*
 
 __pychace__/*
 
@@ -11,3 +12,5 @@ __pychace__/*
 docs/outputdir/*
 results/
 data/
+
+build/*
