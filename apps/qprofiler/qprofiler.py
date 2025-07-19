@@ -37,7 +37,7 @@ current_dir = os.getcwd()
 @hydra.main(config_path='./configs/', config_name='config.yaml', version_base='1.1')
 def main(args):
     """
-    Main function to run the qbiocode profiler. It initializes logging, sets up the environment, and processes datasets.
+    Main function to run the qprofiler. It initializes logging, sets up the environment, and processes datasets.
     The function reads datasets from the specified folder, applies feature encoding, splits the data into training and test sets,
     applies scaling and embeddings, and evaluates the models using various quantum machine learning methods.
     It logs the results and saves them in a structured format for further analysis. 
