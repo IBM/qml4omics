@@ -8,6 +8,10 @@ QProfiler helps analize quickly your data via a series basic models (classical a
 Furthemore, it helps understand the data charactestics via the use of complexity measures.
 
 
+.. note::
+    Before you start, make sure that you have installed QBioCode correctly by following the  `Installation <https://ibm.github.io/QBioCode/installation.html>`_ guide.
+
+
 The QProfiler relies on a `config.yaml` file for tis setting and paremeters. **To run the project via the command prompt, you must have a correctly formatted `config.yaml`.**
 
 `config.yaml` Structure
@@ -33,7 +37,7 @@ To run QProfiler use the following command in your terminal
 
 .. code-block:: bash
 
-    python profiler.py --config-name=config.yaml
+    python qprofiler.py --config-name=config.yaml
 
 
 
@@ -44,5 +48,5 @@ You can also get extra information using the following command in your terminal
 
 .. code-block:: bash
 
-    python profiler.py --help
+    python qprofiler.py --help
 
