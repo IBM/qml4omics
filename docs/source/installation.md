@@ -47,7 +47,7 @@ Once the activated, you'll see `(venv)` at the beginning of your terminal promt.
 4. **Install project dependencies:**
    Once the virtual enviroment is activated, you can install the required packages listed in the `requirements.txt` file:
   ```bash
-  pip install  -r requirements.txt
+  pip install  .
   ```
 5. **Deactivate the virtual enviroment (when you are done):**
    ```bash
@@ -66,7 +66,7 @@ conda create -n qbc python==3.11
 2. Activate the new environment:
 ```
 conda activate qbc
-pip install -r requirements.txt
+pip install .
 ```
 3. Verify that the new environment and packages were installed correctly:
 ```
