@@ -33,7 +33,7 @@ To run QProfiler use the following command in your terminal
 
 .. code-block:: bash
 
-    python qbiocode-profiler.py --config-name=config.yaml
+    python profiler.py --config-name=config.yaml
 
 
 
@@ -44,5 +44,5 @@ You can also get extra information using the following command in your terminal
 
 .. code-block:: bash
 
-    python qbiocode-profiler.py --help
+    python profiler.py --help
 
