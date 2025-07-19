@@ -366,6 +366,10 @@
 <h1>QProfiler<a class="headerlink" href="#qprofiler" title="Link to this heading">#</a></h1>
 <p>QProfiler helps analize quickly your data via a series basic models (classical and quantum) allowing parameter tuning without much code.
 Furthemore, it helps understand the data charactestics via the use of complexity measures.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before you start, make sure that you have installed QBioCode correctly by following the  <a class="reference external" href="https://ibm.github.io/QBioCode/installation.html">Installation</a> guide.</p>
+</div>
 <p>The QProfiler relies on a <cite>config.yaml</cite> file for tis setting and paremeters. <strong>To run the project via the command prompt, you must have a correctly formatted `config.yaml`.</strong></p>
 <section id="config-yaml-structure">
 <h2><cite>config.yaml</cite> Structure<a class="headerlink" href="#config-yaml-structure" title="Link to this heading">#</a></h2>
@@ -392,14 +396,14 @@ The project will likely fail or behave unexpectedly if the <cite>config.yaml</ci
 <section id="running-via-command-prompt">
 <h2>Running via command prompt<a class="headerlink" href="#running-via-command-prompt" title="Link to this heading">#</a></h2>
 <p>To run QProfiler use the following command in your terminal</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>profiler.py<span class="w"> </span>--config-name<span class="o">=</span>config.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>qprofiler.py<span class="w"> </span>--config-name<span class="o">=</span>config.yaml
 </pre></div>
 </div>
 </section>
 <section id="help">
 <h2>Help<a class="headerlink" href="#help" title="Link to this heading">#</a></h2>
 <p>You can also get extra information using the following command in your terminal</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>profiler.py<span class="w"> </span>--help
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>qprofiler.py<span class="w"> </span>--help
 </pre></div>
 </div>
 </section>
