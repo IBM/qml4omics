@@ -25,7 +25,7 @@ Key Features
 ========================
 
 * **Quantum algorithms for HLCS**: Dive into bioinformatics and computation biology applications powered by quantum insights.
-* **Open Source Collaboration**: Contribue to the code, sharing your code, and collaborate on groundbreaking research.
+* **Open Source Collaboration**: Contribute to the code, sharing your code, and collaborate on groundbreaking research.
 * **Practical Examples**: Learn by doing with a collection of practical code example demonstrating how to implement quantum solution for various HLCS scenarios.
 
 ----------------------------------------------------------
